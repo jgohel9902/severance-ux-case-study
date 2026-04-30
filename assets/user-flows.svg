@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1700" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgFlow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f3ed"/>
+      <stop offset="1" stop-color="#f0e9dd"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a6470"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1700" fill="url(#bgFlow)"/>
+
+  <text x="60" y="60" font-size="32" font-weight="700" fill="#1a2332">Severance — Primary User Flows</text>
+  <text x="60" y="92" font-size="15" fill="#5a6470">3 flows · onboarding · file unemployment / EI · severance reviewer</text>
+
+  <!-- ===== FLOW 1: ONBOARDING ===== -->
+  <g>
+    <rect x="60" y="120" width="1480" height="36" rx="8" fill="#1a2332"/>
+    <text x="80" y="144" font-size="15" font-weight="700" fill="#f5f0e8">Flow 1 · Onboarding · &lt; 8 min · anchor: Maya</text>
+
+    <!-- Steps -->
+    <g font-size="12" fill="#1a2332">
+      <!-- 1 -->
+      <rect x="80" y="180" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="160" y="206" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">START</text>
+      <text x="160" y="226" text-anchor="middle">Splash + tone</text>
+
+      <!-- 2 Privacy -->
+      <rect x="270" y="180" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="350" y="206" font-size="11" font-weight="700" text-anchor="middle">Privacy</text>
+      <text x="350" y="226" text-anchor="middle">60-word disclosure</text>
+
+      <!-- 3 Location -->
+      <rect x="460" y="180" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="540" y="206" font-size="11" font-weight="700" text-anchor="middle">Where do you live?</text>
+      <text x="540" y="226" text-anchor="middle">State / province</text>
+
+      <!-- 4 Situation (decision) -->
+      <polygon points="700,180 800,210 700,240 600,210" fill="#fff7e8" stroke="#d4a259"/>
+      <text x="700" y="208" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5a1a">Situation?</text>
+      <text x="700" y="225" font-size="10" text-anchor="middle" fill="#7a5a1a">3-way fork</text>
+
+      <!-- 4a laid off -->
+      <rect x="830" y="180" width="160" height="60" rx="8" fill="#e8f0ed" stroke="#3e6e63"/>
+      <text x="910" y="206" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">Laid off (no cause)</text>
+      <text x="910" y="226" font-size="11" fill="#3e6e63" text-anchor="middle">→ continue</text>
+
+      <!-- 4b voluntary off-ramp -->
+      <rect x="830" y="120" width="160" height="40" rx="6" fill="#fbeeec" stroke="#7a3d3d"/>
+      <text x="910" y="146" font-size="11" font-weight="700" fill="#7a3d3d" text-anchor="middle">Voluntary → off-ramp</text>
+
+      <!-- 4c for cause off-ramp -->
+      <rect x="830" y="260" width="160" height="40" rx="6" fill="#fbeeec" stroke="#7a3d3d"/>
+      <text x="910" y="286" font-size="11" font-weight="700" fill="#7a3d3d" text-anchor="middle">For cause → off-ramp</text>
+
+      <!-- 5 Last day worked -->
+      <rect x="1020" y="180" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="1100" y="206" font-size="11" font-weight="700" text-anchor="middle">Last day worked</text>
+      <text x="1100" y="226" text-anchor="middle">Date picker</text>
+
+      <!-- 6 Severance offered -->
+      <rect x="1210" y="180" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="1290" y="206" font-size="11" font-weight="700" text-anchor="middle">Severance offered?</text>
+      <text x="1290" y="226" text-anchor="middle">Y / N / Not sure</text>
+
+      <!-- Row 2 -->
+      <rect x="80" y="320" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="160" y="346" font-size="11" font-weight="700" text-anchor="middle">Household</text>
+      <text x="160" y="366" text-anchor="middle">Composition</text>
+
+      <rect x="270" y="320" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="350" y="346" font-size="11" font-weight="700" text-anchor="middle">Financial baseline</text>
+      <text x="350" y="366" text-anchor="middle">(skippable)</text>
+
+      <rect x="460" y="320" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="540" y="346" font-size="11" font-weight="700" text-anchor="middle">What feels urgent?</text>
+      <text x="540" y="366" text-anchor="middle">Multi-select</text>
+
+      <rect x="650" y="320" width="200" height="60" rx="8" fill="#3e6e63" stroke="#3e6e63"/>
+      <text x="750" y="346" font-size="12" font-weight="700" fill="#f5f0e8" text-anchor="middle">Home — 30-Day Plan</text>
+      <text x="750" y="366" font-size="11" fill="#d4e8e1" text-anchor="middle">END</text>
+    </g>
+
+    <!-- Arrows for flow 1 -->
+    <g stroke="#5a6470" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <line x1="240" y1="210" x2="270" y2="210"/>
+      <line x1="430" y1="210" x2="460" y2="210"/>
+      <line x1="620" y1="210" x2="600" y2="210"/>
+      <line x1="800" y1="210" x2="830" y2="210"/>
+      <line x1="700" y1="180" x2="830" y2="140" stroke-dasharray="4 3"/>
+      <line x1="700" y1="240" x2="830" y2="280" stroke-dasharray="4 3"/>
+      <line x1="990" y1="210" x2="1020" y2="210"/>
+      <line x1="1180" y1="210" x2="1210" y2="210"/>
+      <line x1="1290" y1="240" x2="1290" y2="280" />
+      <path d="M 1290 280 L 1290 320 L 240 320"/>
+      <line x1="240" y1="350" x2="270" y2="350"/>
+      <line x1="430" y1="350" x2="460" y2="350"/>
+      <line x1="620" y1="350" x2="650" y2="350"/>
+    </g>
+  </g>
+
+  <!-- ===== FLOW 2: FILE UI / EI ===== -->
+  <g transform="translate(0 460)">
+    <rect x="60" y="0" width="1480" height="36" rx="8" fill="#c46a5a"/>
+    <text x="80" y="24" font-size="15" font-weight="700" fill="#f5f0e8">Flow 2 · File Unemployment / EI · state-specific · anchor: Daniel + Maya</text>
+
+    <g font-size="12" fill="#1a2332">
+      <rect x="80" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="160" y="86" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">START</text>
+      <text x="160" y="106" text-anchor="middle">Today's Action tap</text>
+
+      <rect x="270" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="350" y="86" font-size="11" font-weight="700" text-anchor="middle">Pre-flight checklist</text>
+      <text x="350" y="106" text-anchor="middle">SIN / employer / dates</text>
+
+      <polygon points="540,60 640,90 540,120 440,90" fill="#fff7e8" stroke="#d4a259"/>
+      <text x="540" y="86" font-size="11" font-weight="700" text-anchor="middle" fill="#7a5a1a">ROE / pay stub?</text>
+      <text x="540" y="103" font-size="10" text-anchor="middle" fill="#7a5a1a">Y / N</text>
+
+      <rect x="680" y="20" width="160" height="40" rx="6" fill="#fdf3e8" stroke="#d4a259"/>
+      <text x="760" y="46" font-size="11" font-weight="700" fill="#7a5a1a" text-anchor="middle">N → Wait + remind</text>
+
+      <rect x="680" y="120" width="160" height="40" rx="6" fill="#fdf3e8" stroke="#d4a259"/>
+      <text x="760" y="146" font-size="11" font-weight="700" fill="#7a5a1a" text-anchor="middle">"What's an ROE?"</text>
+
+      <rect x="680" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="760" y="86" font-size="11" font-weight="700" text-anchor="middle">State intro</text>
+      <text x="760" y="106" text-anchor="middle">Time + steps preview</text>
+
+      <rect x="870" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="950" y="86" font-size="11" font-weight="700" text-anchor="middle">Personal info</text>
+      <text x="950" y="106" text-anchor="middle">Auto-filled</text>
+
+      <rect x="1060" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="1140" y="86" font-size="11" font-weight="700" text-anchor="middle">Employer info</text>
+      <text x="1140" y="106" text-anchor="middle">Multi-employer OK</text>
+
+      <rect x="1250" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="1330" y="86" font-size="11" font-weight="700" text-anchor="middle">Reason for separation</text>
+      <text x="1330" y="106" text-anchor="middle">Phrasing checked</text>
+
+      <rect x="80" y="200" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="160" y="226" font-size="11" font-weight="700" text-anchor="middle">Earnings 18 mo</text>
+      <text x="160" y="246" text-anchor="middle">Helper illustrated</text>
+
+      <rect x="270" y="200" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="350" y="226" font-size="11" font-weight="700" text-anchor="middle">Direct deposit</text>
+      <text x="350" y="246" text-anchor="middle">Banking details</text>
+
+      <rect x="460" y="200" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="540" y="226" font-size="11" font-weight="700" text-anchor="middle">Review &amp; submit</text>
+      <text x="540" y="246" text-anchor="middle">Local copy saved</text>
+
+      <rect x="650" y="200" width="200" height="60" rx="8" fill="#c46a5a" stroke="#c46a5a"/>
+      <text x="750" y="226" font-size="12" font-weight="700" fill="#f5f0e8" text-anchor="middle">Confirmation</text>
+      <text x="750" y="246" font-size="11" fill="#fde4dd" text-anchor="middle">Banner cleared · END</text>
+    </g>
+
+    <g stroke="#5a6470" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <line x1="240" y1="90" x2="270" y2="90"/>
+      <line x1="430" y1="90" x2="440" y2="90"/>
+      <line x1="540" y1="60" x2="680" y2="40" stroke-dasharray="4 3"/>
+      <line x1="540" y1="120" x2="680" y2="140" stroke-dasharray="4 3"/>
+      <line x1="640" y1="90" x2="680" y2="90"/>
+      <line x1="840" y1="90" x2="870" y2="90"/>
+      <line x1="1030" y1="90" x2="1060" y2="90"/>
+      <line x1="1220" y1="90" x2="1250" y2="90"/>
+      <path d="M 1330 120 L 1330 180 L 160 180 L 160 200"/>
+      <line x1="240" y1="230" x2="270" y2="230"/>
+      <line x1="430" y1="230" x2="460" y2="230"/>
+      <line x1="620" y1="230" x2="650" y2="230"/>
+    </g>
+  </g>
+
+  <!-- ===== FLOW 3: SEVERANCE REVIEWER ===== -->
+  <g transform="translate(0 800)">
+    <rect x="60" y="0" width="1480" height="36" rx="8" fill="#5a3a4f"/>
+    <text x="80" y="24" font-size="15" font-weight="700" fill="#f5f0e8">Flow 3 · Severance Reviewer · plain-language clause cards · anchor: Maya + Daniel</text>
+
+    <g font-size="12" fill="#1a2332">
+      <rect x="80" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="160" y="86" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">START</text>
+      <text x="160" y="106" text-anchor="middle">Tap "Review severance"</text>
+
+      <rect x="270" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="350" y="86" font-size="11" font-weight="700" text-anchor="middle">Upload / paste</text>
+      <text x="350" y="106" text-anchor="middle">Local-first parsing</text>
+
+      <rect x="460" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="540" y="86" font-size="11" font-weight="700" text-anchor="middle">"We've read it"</text>
+      <text x="540" y="106" text-anchor="middle">Tone-setting screen</text>
+
+      <rect x="650" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="730" y="86" font-size="11" font-weight="700" text-anchor="middle">Summary card</text>
+      <text x="730" y="106" text-anchor="middle">Total · deadline · benefits</text>
+
+      <rect x="840" y="60" width="200" height="60" rx="8" fill="#fdf3e8" stroke="#d4a259"/>
+      <text x="940" y="86" font-size="11" font-weight="700" fill="#7a5a1a" text-anchor="middle">Plain-language clause cards</text>
+      <text x="940" y="106" font-size="11" fill="#7a5a1a" text-anchor="middle">9 clause types · badges</text>
+
+      <rect x="1070" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="1150" y="86" font-size="11" font-weight="700" text-anchor="middle">"What's NOT in it"</text>
+      <text x="1150" y="106" text-anchor="middle">Side panel</text>
+
+      <rect x="1260" y="60" width="160" height="60" rx="8" fill="#ffffff" stroke="#a89e8a"/>
+      <text x="1340" y="86" font-size="11" font-weight="700" text-anchor="middle">Action panel</text>
+      <text x="1340" y="106" text-anchor="middle">4 outcomes</text>
+
+      <rect x="80" y="200" width="280" height="60" rx="8" fill="#e8f0ed" stroke="#3e6e63"/>
+      <text x="220" y="226" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">Save annotated to vault</text>
+      <text x="220" y="246" font-size="11" fill="#3e6e63" text-anchor="middle">END · ready to share</text>
+
+      <rect x="390" y="200" width="280" height="60" rx="8" fill="#e8f0ed" stroke="#3e6e63"/>
+      <text x="530" y="226" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">Share with partner / lawyer</text>
+      <text x="530" y="246" font-size="11" fill="#3e6e63" text-anchor="middle">END · 7-day encrypted link</text>
+
+      <rect x="700" y="200" width="280" height="60" rx="8" fill="#e8f0ed" stroke="#3e6e63"/>
+      <text x="840" y="226" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">Draft counter-offer email</text>
+      <text x="840" y="246" font-size="11" fill="#3e6e63" text-anchor="middle">END · template + examples</text>
+
+      <rect x="1010" y="200" width="280" height="60" rx="8" fill="#e8f0ed" stroke="#3e6e63"/>
+      <text x="1150" y="226" font-size="11" font-weight="700" fill="#3e6e63" text-anchor="middle">Mark as signed</text>
+      <text x="1150" y="246" font-size="11" fill="#3e6e63" text-anchor="middle">END · banner cleared</text>
+    </g>
+
+    <g stroke="#5a6470" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <line x1="240" y1="90" x2="270" y2="90"/>
+      <line x1="430" y1="90" x2="460" y2="90"/>
+      <line x1="620" y1="90" x2="650" y2="90"/>
+      <line x1="810" y1="90" x2="840" y2="90"/>
+      <line x1="1040" y1="90" x2="1070" y2="90"/>
+      <line x1="1230" y1="90" x2="1260" y2="90"/>
+      <path d="M 1340 120 L 1340 170 L 220 170 L 220 200"/>
+      <line x1="220" y1="230" x2="220" y2="200" />
+      <path d="M 670 170 L 530 170 L 530 200"/>
+      <path d="M 670 170 L 840 170 L 840 200"/>
+      <path d="M 670 170 L 1150 170 L 1150 200"/>
+    </g>
+  </g>
+
+  <!-- Patterns shared -->
+  <g transform="translate(60 1500)">
+    <rect width="1480" height="180" rx="10" fill="#ffffff" stroke="#d4cab4"/>
+    <text x="20" y="32" font-size="16" font-weight="700" fill="#1a2332">Design patterns shared across all 3 flows</text>
+    <g font-size="13" fill="#2c3540">
+      <text x="20" y="60" font-weight="700" fill="#3e6e63">Pause / Resume</text>
+      <text x="20" y="80">Visible on every screen of every flow.</text>
+
+      <text x="380" y="60" font-weight="700" fill="#3e6e63">Local-first storage</text>
+      <text x="380" y="80">Default. Cloud sync is opt-in.</text>
+
+      <text x="740" y="60" font-weight="700" fill="#3e6e63">Plain language ≠ replace</text>
+      <text x="740" y="80">"View source" always present next to interpretations.</text>
+
+      <text x="1100" y="60" font-weight="700" fill="#3e6e63">Restraint cues</text>
+      <text x="1100" y="80">25 min on app → soft pause prompt.</text>
+
+      <text x="20" y="120" font-weight="700" fill="#7a3d3d">Off-ramps</text>
+      <text x="20" y="140">Voluntary / for-cause cases route out with respect, not "error."</text>
+
+      <text x="380" y="120" font-weight="700" fill="#7a3d3d">Honest constraints</text>
+      <text x="380" y="140">Severance never says "legal advice." Plain translation only.</text>
+
+      <text x="740" y="120" font-weight="700" fill="#7a3d3d">No streak gamification</text>
+      <text x="740" y="140">No flames, no streaks, no celebratory confetti.</text>
+
+      <text x="1100" y="120" font-weight="700" fill="#7a3d3d">Time-pressure honesty</text>
+      <text x="1100" y="140">Banners fire at &lt; 72h not on day 1.</text>
+    </g>
+  </g>
+</svg>

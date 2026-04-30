@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgIA" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f3ed"/>
+      <stop offset="1" stop-color="#f0e9dd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bgIA)"/>
+
+  <text x="60" y="60" font-size="32" font-weight="700" fill="#1a2332">Severance — Information Architecture (v3)</text>
+  <text x="60" y="92" font-size="15" fill="#5a6470">Sitemap with content inventory · 5-tab bottom navigation · cross-listed surfaces noted</text>
+  <text x="60" y="116" font-size="12" fill="#8a8478" font-style="italic">v3 = post tree-test corrections (Severance Reviewer cross-listed; Spouse income deep-linked from Money)</text>
+
+  <!-- Root: HOME -->
+  <g>
+    <rect x="660" y="160" width="280" height="74" rx="12" fill="#1a2332"/>
+    <text x="800" y="194" font-size="18" font-weight="700" fill="#f5f0e8" text-anchor="middle">HOME</text>
+    <text x="800" y="216" font-size="12" fill="#d4a259" text-anchor="middle">30-Day Plan · today's action</text>
+  </g>
+
+  <!-- Connector lines from HOME to 5 tabs -->
+  <g stroke="#a89e8a" stroke-width="1.6" fill="none">
+    <path d="M 800 234 L 800 260 L 165 260 L 165 300"/>
+    <path d="M 800 234 L 800 260 L 425 260 L 425 300"/>
+    <path d="M 800 234 L 800 300"/>
+    <path d="M 800 234 L 800 260 L 1175 260 L 1175 300"/>
+    <path d="M 800 234 L 800 260 L 1435 260 L 1435 300"/>
+  </g>
+
+  <!-- 5 tab columns -->
+  <!-- HOME tab content (column 1) -->
+  <g>
+    <rect x="40" y="300" width="250" height="42" rx="8" fill="#3e6e63"/>
+    <text x="165" y="328" font-size="14" font-weight="700" fill="#f5f0e8" text-anchor="middle">HOME (tab)</text>
+    <g font-size="12" fill="#1a2332">
+      <rect x="40" y="358" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="56" y="382">Today's Action card</text>
+      <rect x="40" y="404" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="56" y="428">Day timeline (1–30)</text>
+      <rect x="40" y="450" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="56" y="474">Runway tile (one number)</text>
+      <rect x="40" y="496" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="56" y="520">Calm Companion entry</text>
+      <rect x="40" y="542" width="250" height="38" rx="6" fill="#fff7e8" stroke="#d4a259"/>
+      <text x="56" y="566" fill="#7a5a1a">Filing-window banner *</text>
+      <text x="56" y="592" font-size="9" fill="#8a8478" font-style="italic">* shows only if &lt; 72h to a deadline</text>
+    </g>
+  </g>
+
+  <!-- PLAN tab (column 2) -->
+  <g>
+    <rect x="300" y="300" width="250" height="42" rx="8" fill="#3e6e63"/>
+    <text x="425" y="328" font-size="14" font-weight="700" fill="#f5f0e8" text-anchor="middle">PLAN (tab)</text>
+    <g font-size="12" fill="#1a2332">
+      <rect x="300" y="358" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="316" y="382">Day-by-day timeline</text>
+      <rect x="300" y="404" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="316" y="428">Filing windows (UI / COBRA / Sev.)</text>
+      <rect x="300" y="450" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="316" y="474">Weekly check-in</text>
+      <rect x="300" y="496" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="316" y="520">LinkedIn post timing</text>
+      <rect x="300" y="542" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="316" y="566">Day 30 wrap-up</text>
+    </g>
+  </g>
+
+  <!-- MONEY tab (column 3) -->
+  <g>
+    <rect x="675" y="300" width="250" height="42" rx="8" fill="#c46a5a"/>
+    <text x="800" y="328" font-size="14" font-weight="700" fill="#f5f0e8" text-anchor="middle">MONEY (tab)</text>
+    <g font-size="12" fill="#1a2332">
+      <rect x="675" y="358" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="691" y="382">Runway calculator</text>
+      <rect x="675" y="404" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="691" y="428">Subscription audit</text>
+      <rect x="675" y="450" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="691" y="474">401(k) / RRSP rollover guide</text>
+      <rect x="675" y="496" width="250" height="38" rx="6" fill="#fdf3e8" stroke="#d4a259"/>
+      <text x="691" y="520" fill="#7a5a1a">Severance Reviewer ↗</text>
+      <rect x="675" y="542" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="691" y="566">"Extend runway" suggestions</text>
+      <rect x="675" y="588" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="691" y="612">Household income (deep-link)</text>
+    </g>
+  </g>
+
+  <!-- DOCUMENTS tab (column 4) -->
+  <g>
+    <rect x="1050" y="300" width="250" height="42" rx="8" fill="#c46a5a"/>
+    <text x="1175" y="328" font-size="14" font-weight="700" fill="#f5f0e8" text-anchor="middle">DOCUMENTS (tab)</text>
+    <g font-size="12" fill="#1a2332">
+      <rect x="1050" y="358" width="250" height="38" rx="6" fill="#fdf3e8" stroke="#d4a259"/>
+      <text x="1066" y="382" fill="#7a5a1a">Severance Reviewer ↗</text>
+      <rect x="1050" y="404" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1066" y="428">Plain-language clause cards</text>
+      <rect x="1050" y="450" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1066" y="474">Annotated PDF view</text>
+      <rect x="1050" y="496" width="250" height="38" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1066" y="520">Document vault</text>
+      <rect x="1050" y="542" width="250" height="38" rx="6" fill="#f0e8ed" stroke="#a3839c"/>
+      <text x="1066" y="566" fill="#5a3a4f">Privacy: who sees what</text>
+    </g>
+  </g>
+
+  <!-- MORE tab (column 5) → Health / Profile / Settings -->
+  <g>
+    <rect x="1310" y="300" width="250" height="42" rx="8" fill="#5a6470"/>
+    <text x="1435" y="328" font-size="14" font-weight="700" fill="#f5f0e8" text-anchor="middle">MORE (tab)</text>
+    <g font-size="12" fill="#1a2332">
+      <rect x="1310" y="358" width="250" height="38" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+      <text x="1326" y="382" font-weight="700" fill="#3e6e63">HEALTH</text>
+      <rect x="1310" y="404" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="426">COBRA vs. ACA decision tool</text>
+      <rect x="1310" y="446" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="468">Provider-network checker</text>
+      <rect x="1310" y="488" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="510">Prescription continuity</text>
+      <rect x="1310" y="530" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="552">Crisis &amp; mental-health routing</text>
+
+      <rect x="1310" y="580" width="250" height="38" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+      <text x="1326" y="604" font-weight="700" fill="#3e6e63">PROFILE</text>
+      <rect x="1310" y="626" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="648">Household composition</text>
+      <rect x="1310" y="668" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="690">Location (state / province)</text>
+      <rect x="1310" y="710" width="250" height="34" rx="6" fill="#ffffff" stroke="#d4cab4"/>
+      <text x="1340" y="732">Severance details</text>
+      <rect x="1310" y="752" width="250" height="34" rx="6" fill="#fff7e8" stroke="#d4a259"/>
+      <text x="1340" y="774" fill="#7a5a1a">Visa status (v1.1)</text>
+    </g>
+  </g>
+
+  <!-- Cross-listing arrow Severance Reviewer (Money ↔ Documents) -->
+  <g stroke="#d4a259" stroke-width="2" fill="none" stroke-dasharray="6 4">
+    <path d="M 925 515 C 990 515 990 377 1050 377"/>
+  </g>
+  <text x="970" y="448" font-size="11" fill="#7a5a1a" font-style="italic">cross-listed</text>
+
+  <!-- Legend -->
+  <g transform="translate(60 850)">
+    <text font-size="14" font-weight="700" fill="#1a2332">Legend</text>
+    <g transform="translate(0 16)" font-size="12" fill="#1a2332">
+      <rect x="0" y="0" width="22" height="22" rx="4" fill="#3e6e63"/>
+      <text x="32" y="16">Always-visible navigation surface</text>
+
+      <rect x="240" y="0" width="22" height="22" rx="4" fill="#c46a5a"/>
+      <text x="272" y="16">High-stakes content (severance / money)</text>
+
+      <rect x="540" y="0" width="22" height="22" rx="4" fill="#fdf3e8" stroke="#d4a259"/>
+      <text x="572" y="16">Cross-listed surface (appears in 2+ places)</text>
+
+      <rect x="840" y="0" width="22" height="22" rx="4" fill="#fff7e8" stroke="#d4a259"/>
+      <text x="872" y="16">Conditional / time-sensitive content</text>
+
+      <rect x="1180" y="0" width="22" height="22" rx="4" fill="#f0e8ed" stroke="#a3839c"/>
+      <text x="1212" y="16">Privacy-sensitive surface</text>
+    </g>
+  </g>
+
+  <!-- Tree-test results panel -->
+  <g transform="translate(60 940)">
+    <rect width="1480" height="120" rx="10" fill="#ffffff" stroke="#d4cab4"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#1a2332">Tree-test outcomes (v3, n=12)</text>
+    <g font-size="12" fill="#2c3540">
+      <text x="20" y="54">UI Filing Helper · 92% / 86%</text>
+      <text x="220" y="54">Runway calculator · 100% / 100%</text>
+      <text x="460" y="54">Severance review · 91% / 84% (after cross-list)</text>
+      <text x="800" y="54">Spouse income · 88% / 78% (after deep-link)</text>
+      <text x="1100" y="54">401(k) rollover · 85% / 76% (after rename)</text>
+
+      <text x="20" y="80">Find tomorrow's plan · 92% / 86%</text>
+      <text x="280" y="80">Cancel a subscription · 92% / 86%</text>
+      <text x="540" y="80">Update state · 90% / 78% (after iconic affordance)</text>
+      <text x="900" y="80" font-style="italic" fill="#8a8478">Numbers shown as: success / first-click correct</text>
+    </g>
+    <text x="20" y="104" font-size="10" fill="#8a8478" font-style="italic">v1 sitemap success: 67% avg · v3 success: 90% avg · gain driven by cross-listing and deep-linking, not navigation depth</text>
+  </g>
+</svg>

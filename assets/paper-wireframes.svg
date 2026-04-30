@@ -1,0 +1,421 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1450" font-family="'Caveat', 'Patrick Hand', 'Indie Flower', cursive">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&amp;family=Patrick+Hand&amp;family=Kalam:wght@400;700&amp;display=swap');
+      .h    { font-family: 'Kalam', 'Caveat', cursive; font-weight: 700; }
+      .body { font-family: 'Patrick Hand', 'Caveat', cursive; }
+      .note { font-family: 'Caveat', cursive; font-style: italic; fill: #6b4a2c; }
+    </style>
+    <!-- Sketchy wobble filter -->
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.6"/>
+    </filter>
+    <filter id="rough2" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="2.2"/>
+    </filter>
+    <pattern id="dotgrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="0.7" fill="#c8b896" opacity="0.55"/>
+    </pattern>
+    <linearGradient id="paperGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5ecd6"/>
+      <stop offset="1" stop-color="#ecdfc1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Paper -->
+  <rect width="1600" height="1450" fill="url(#paperGrad)"/>
+  <rect width="1600" height="1450" fill="url(#dotgrid)"/>
+
+  <!-- Coffee stain (because of course) -->
+  <ellipse cx="1480" cy="80" rx="56" ry="50" fill="#c8a47c" opacity="0.18"/>
+  <ellipse cx="1480" cy="80" rx="40" ry="36" fill="#a87c4c" opacity="0.10"/>
+
+  <!-- Header -->
+  <text x="60" y="80" font-size="44" class="h" fill="#2a2014">Severance · paper wireframes</text>
+  <text x="60" y="118" font-size="22" class="note">8 screens · drawn dot-grid notebook · week 8 · jenil</text>
+
+  <!-- ======================== SCREEN 1: ONBOARDING SPLASH ======================== -->
+  <g transform="translate(60 160)" filter="url(#rough)">
+    <!-- Phone outline -->
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <!-- notch -->
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <!-- Status bar -->
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">9:41</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">●●● 100%</text>
+
+    <!-- Logo / wordmark -->
+    <text x="160" y="170" font-size="38" class="h" fill="#1f1812" text-anchor="middle">severance</text>
+    <line x1="105" y1="180" x2="215" y2="180" stroke="#1f1812" stroke-width="2"/>
+    <text x="160" y="220" font-size="18" class="body" fill="#2a2014" text-anchor="middle">your first 30 days,</text>
+    <text x="160" y="244" font-size="18" class="body" fill="#2a2014" text-anchor="middle">handled.</text>
+
+    <!-- Soft message -->
+    <rect x="36" y="320" width="248" height="80" rx="10" fill="none" stroke="#5a3a1c" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="160" y="350" font-size="16" class="body" fill="#2a2014" text-anchor="middle">we're sorry.</text>
+    <text x="160" y="372" font-size="16" class="body" fill="#2a2014" text-anchor="middle">let's make this</text>
+    <text x="160" y="392" font-size="16" class="body" fill="#2a2014" text-anchor="middle">a little calmer.</text>
+
+    <!-- CTA button -->
+    <rect x="50" y="470" width="220" height="56" rx="28" fill="#2a2014"/>
+    <text x="160" y="504" font-size="20" class="h" fill="#fffaef" text-anchor="middle">begin</text>
+
+    <!-- footer link -->
+    <text x="160" y="554" font-size="13" class="body" fill="#5a4a32" text-anchor="middle">why we built this</text>
+  </g>
+  <!-- annotations -->
+  <text x="60" y="770" font-size="18" class="note">01 · onboarding splash</text>
+  <text x="60" y="794" font-size="18" class="note">tone-set: not cheerful, not somber</text>
+  <text x="60" y="818" font-size="16" class="note" fill="#7a3d3d">* no logo with smiling face *</text>
+
+  <!-- ======================== SCREEN 2: WHAT FEELS URGENT ======================== -->
+  <g transform="translate(440 160)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">9:48</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">step 9 of 9</text>
+
+    <!-- Progress dots -->
+    <g transform="translate(36 70)">
+      <circle cx="0" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="32" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="64" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="96" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="128" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="160" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="192" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="224" cy="0" r="4" fill="#1f1812"/>
+      <circle cx="248" cy="0" r="6" fill="#1f1812" stroke="#1f1812" stroke-width="2"/>
+    </g>
+
+    <text x="160" y="120" font-size="22" class="h" fill="#1f1812" text-anchor="middle">what feels most</text>
+    <text x="160" y="148" font-size="22" class="h" fill="#1f1812" text-anchor="middle">urgent right now?</text>
+    <text x="160" y="178" font-size="14" class="body" fill="#5a4a32" text-anchor="middle">choose any · we'll plan around them</text>
+
+    <!-- options as pillchecks -->
+    <g class="body" font-size="15" fill="#1f1812">
+      <rect x="30" y="200" width="260" height="44" rx="22" fill="#1f1812"/>
+      <text x="50" y="228" fill="#fffaef">☑ filing for unemployment</text>
+
+      <rect x="30" y="252" width="260" height="44" rx="22" fill="#1f1812"/>
+      <text x="50" y="280" fill="#fffaef">☑ health insurance</text>
+
+      <rect x="30" y="304" width="260" height="44" rx="22" fill="none" stroke="#1f1812" stroke-width="2"/>
+      <text x="50" y="332">☐ severance review</text>
+
+      <rect x="30" y="356" width="260" height="44" rx="22" fill="#1f1812"/>
+      <text x="50" y="384" fill="#fffaef">☑ money / runway</text>
+
+      <rect x="30" y="408" width="260" height="44" rx="22" fill="none" stroke="#1f1812" stroke-width="2"/>
+      <text x="50" y="436">☐ honestly, I just need a moment</text>
+    </g>
+
+    <!-- continue -->
+    <rect x="50" y="490" width="220" height="56" rx="28" fill="#2a2014"/>
+    <text x="160" y="524" font-size="20" class="h" fill="#fffaef" text-anchor="middle">build my plan →</text>
+  </g>
+  <text x="440" y="770" font-size="18" class="note">02 · onboarding step 9 — urgency</text>
+  <text x="440" y="794" font-size="18" class="note">selection sets day-1 emphasis</text>
+  <text x="440" y="818" font-size="16" class="note" fill="#3e6e63">* "just need a moment" → calm mode *</text>
+
+  <!-- ======================== SCREEN 3: HOME DAY 4 ======================== -->
+  <g transform="translate(820 160)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">9:14</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">day 4 / 30</text>
+
+    <!-- greeting -->
+    <text x="22" y="86" font-size="20" class="h" fill="#1f1812">good morning, Maya</text>
+    <text x="22" y="110" font-size="14" class="body" fill="#5a4a32">it's day 4. paperwork day.</text>
+
+    <!-- Day timeline -->
+    <g transform="translate(22 130)">
+      <rect x="0" y="0" width="276" height="40" rx="6" fill="none" stroke="#1f1812" stroke-width="1.5"/>
+      <line x1="0" y1="20" x2="276" y2="20" stroke="#c8b896" stroke-width="1.5" stroke-dasharray="2 4"/>
+      <!-- day dots 1..30 sample -->
+      <g fill="#1f1812">
+        <circle cx="9" cy="20" r="3"/>
+        <circle cx="18" cy="20" r="3"/>
+        <circle cx="27" cy="20" r="3"/>
+        <circle cx="36" cy="20" r="6" fill="#c46a5a" stroke="#1f1812" stroke-width="2"/>
+        <circle cx="45" cy="20" r="3"/>
+        <circle cx="54" cy="20" r="3"/>
+        <circle cx="63" cy="20" r="3"/>
+        <circle cx="72" cy="20" r="3"/>
+        <circle cx="81" cy="20" r="3"/>
+        <circle cx="90" cy="20" r="3"/>
+      </g>
+      <text x="138" y="20" font-size="11" class="body" fill="#5a4a32" text-anchor="middle">··· day 30</text>
+    </g>
+
+    <!-- Today's Action card -->
+    <rect x="22" y="184" width="276" height="140" rx="14" fill="#1f1812"/>
+    <text x="36" y="208" font-size="11" class="h" fill="#d4a259">TODAY · do this one thing</text>
+    <text x="36" y="240" font-size="22" class="h" fill="#fffaef">file your CA</text>
+    <text x="36" y="266" font-size="22" class="h" fill="#fffaef">unemployment claim</text>
+    <text x="36" y="292" font-size="13" class="body" fill="#bfae90">~ 18 min · we'll guide you</text>
+    <rect x="186" y="288" width="100" height="28" rx="14" fill="#fffaef"/>
+    <text x="236" y="307" font-size="14" class="h" fill="#1f1812" text-anchor="middle">start →</text>
+
+    <!-- Runway tile -->
+    <rect x="22" y="340" width="132" height="100" rx="12" fill="none" stroke="#1f1812" stroke-width="2"/>
+    <text x="36" y="362" font-size="11" class="h" fill="#5a4a32">runway</text>
+    <text x="36" y="402" font-size="32" class="h" fill="#1f1812">5.7</text>
+    <text x="84" y="402" font-size="14" class="body" fill="#5a4a32">months</text>
+    <text x="36" y="424" font-size="11" class="body" fill="#3e6e63">↑ extend by $284</text>
+
+    <!-- Calm Companion tile -->
+    <rect x="166" y="340" width="132" height="100" rx="12" fill="none" stroke="#1f1812" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="180" y="362" font-size="11" class="h" fill="#5a4a32">calm check-in</text>
+    <text x="180" y="392" font-size="14" class="body" fill="#1f1812">how is today,</text>
+    <text x="180" y="412" font-size="14" class="body" fill="#1f1812">in one word?</text>
+
+    <!-- Filing window banner (amber) -->
+    <rect x="22" y="456" width="276" height="44" rx="10" fill="#fff0d8" stroke="#d4a259" stroke-width="1.5"/>
+    <text x="36" y="480" font-size="13" class="body" fill="#7a5a1a">⏳ COBRA election: 18 days left</text>
+
+    <!-- bottom nav -->
+    <line x1="0" y1="520" x2="320" y2="520" stroke="#1f1812" stroke-width="1"/>
+    <g class="body" font-size="11" fill="#1f1812" text-anchor="middle">
+      <text x="50" y="555">⌂ home</text>
+      <text x="115" y="555">📅 plan</text>
+      <text x="175" y="555">$ money</text>
+      <text x="235" y="555">📄 docs</text>
+      <text x="295" y="555">⋯ more</text>
+    </g>
+  </g>
+  <text x="820" y="770" font-size="18" class="note">03 · home — day 4 (paperwork day)</text>
+  <text x="820" y="794" font-size="18" class="note">today card on top, runway second</text>
+  <text x="820" y="818" font-size="16" class="note" fill="#3e6e63">* one prominent thing, never two *</text>
+
+  <!-- ======================== SCREEN 4: HOME DAY 2 - CALM MODE ======================== -->
+  <g transform="translate(1200 160)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">8:02</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">day 2 / 30</text>
+
+    <text x="22" y="86" font-size="20" class="h" fill="#1f1812">good morning, Joanne</text>
+    <text x="22" y="110" font-size="14" class="body" fill="#5a4a32">it's day 2. the world can wait.</text>
+
+    <!-- Day timeline (early days) -->
+    <g transform="translate(22 130)">
+      <rect x="0" y="0" width="276" height="40" rx="6" fill="none" stroke="#1f1812" stroke-width="1.5"/>
+      <line x1="0" y1="20" x2="276" y2="20" stroke="#c8b896" stroke-width="1.5" stroke-dasharray="2 4"/>
+      <g fill="#1f1812">
+        <circle cx="9" cy="20" r="3"/>
+        <circle cx="18" cy="20" r="6" fill="#c46a5a" stroke="#1f1812" stroke-width="2"/>
+        <circle cx="27" cy="20" r="3"/>
+      </g>
+    </g>
+
+    <!-- One quiet card only -->
+    <rect x="22" y="200" width="276" height="180" rx="14" fill="#fdf6e6" stroke="#1f1812" stroke-width="1.5"/>
+    <text x="160" y="240" font-size="20" class="h" fill="#1f1812" text-anchor="middle">today: rest.</text>
+    <text x="160" y="280" font-size="14" class="body" fill="#5a4a32" text-anchor="middle">save your work contacts</text>
+    <text x="160" y="300" font-size="14" class="body" fill="#5a4a32" text-anchor="middle">if you haven't yet (4 min).</text>
+    <text x="160" y="340" font-size="13" class="body" fill="#3e6e63" text-anchor="middle">we'll surface paperwork on</text>
+    <text x="160" y="358" font-size="13" class="body" fill="#3e6e63" text-anchor="middle">day 4.</text>
+
+    <!-- intentionally empty space below to feel quiet -->
+    <text x="160" y="450" font-size="13" class="body" fill="#a89e8a" text-anchor="middle">— that's all for now —</text>
+
+    <!-- bottom nav -->
+    <line x1="0" y1="520" x2="320" y2="520" stroke="#1f1812" stroke-width="1"/>
+    <g class="body" font-size="11" fill="#1f1812" text-anchor="middle">
+      <text x="50" y="555">⌂ home</text>
+      <text x="115" y="555">📅 plan</text>
+      <text x="175" y="555">$ money</text>
+      <text x="235" y="555">📄 docs</text>
+      <text x="295" y="555">⋯ more</text>
+    </g>
+  </g>
+  <text x="1200" y="770" font-size="18" class="note">04 · home — day 2 calm mode</text>
+  <text x="1200" y="794" font-size="18" class="note">one card. nothing else. on purpose.</text>
+  <text x="1200" y="818" font-size="16" class="note" fill="#7a3d3d">* the empty space IS the design *</text>
+
+  <!-- ======================== SCREEN 5: UI FILING SECTION 3 ======================== -->
+  <g transform="translate(60 870)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">10:22</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">section 3 of 5</text>
+
+    <!-- Header -->
+    <text x="22" y="84" font-size="13" class="body" fill="#5a4a32">← UI filing helper · CA</text>
+    <text x="22" y="118" font-size="22" class="h" fill="#1f1812">reason for separation</text>
+
+    <!-- Body -->
+    <text x="22" y="150" font-size="13" class="body" fill="#5a4a32">how you describe this matters.</text>
+    <text x="22" y="170" font-size="13" class="body" fill="#5a4a32">we'll flag risky phrasing.</text>
+
+    <!-- pre-filled answer -->
+    <rect x="22" y="200" width="276" height="100" rx="10" fill="none" stroke="#1f1812" stroke-width="1.5"/>
+    <text x="34" y="222" font-size="13" class="body" fill="#5a4a32">your answer (auto-filled from</text>
+    <text x="34" y="240" font-size="13" class="body" fill="#5a4a32">onboarding):</text>
+    <text x="34" y="270" font-size="14" class="h" fill="#1f1812">"laid off — position</text>
+    <text x="34" y="290" font-size="14" class="h" fill="#1f1812">eliminated, no cause"</text>
+
+    <!-- explainer -->
+    <rect x="22" y="320" width="276" height="80" rx="10" fill="#e8f0ed" stroke="#3e6e63" stroke-width="1.5"/>
+    <text x="36" y="344" font-size="11" class="h" fill="#3e6e63">✓ this phrasing is well-aligned</text>
+    <text x="36" y="362" font-size="12" class="body" fill="#1f1812">"position eliminated" maps cleanly</text>
+    <text x="36" y="380" font-size="12" class="body" fill="#1f1812">to EDD lay-off categories.</text>
+
+    <!-- common mistake -->
+    <rect x="22" y="416" width="276" height="62" rx="10" fill="#fbeeec" stroke="#7a3d3d" stroke-width="1.5"/>
+    <text x="36" y="438" font-size="11" class="h" fill="#7a3d3d">⚠ common rejection trigger</text>
+    <text x="36" y="458" font-size="12" class="body" fill="#1f1812">don't write "I quit" or</text>
+    <text x="36" y="474" font-size="12" class="body" fill="#1f1812">"chose to leave."</text>
+
+    <!-- Continue -->
+    <rect x="22" y="496" width="180" height="44" rx="22" fill="#2a2014"/>
+    <text x="112" y="524" font-size="16" class="h" fill="#fffaef" text-anchor="middle">continue →</text>
+    <rect x="216" y="496" width="80" height="44" rx="22" fill="none" stroke="#1f1812" stroke-width="2"/>
+    <text x="256" y="524" font-size="14" class="h" fill="#1f1812" text-anchor="middle">pause</text>
+  </g>
+  <text x="60" y="1480" font-size="18" class="note">05 · UI filing helper · "reason"</text>
+  <text x="60" y="1504" font-size="18" class="note">flag rejection-causing phrasing</text>
+
+  <!-- ======================== SCREEN 6: SEVERANCE CLAUSE CARD ======================== -->
+  <g transform="translate(440 870)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">11:08</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">clause 5 of 9</text>
+
+    <text x="22" y="84" font-size="13" class="body" fill="#5a4a32">← severance review</text>
+
+    <!-- card -->
+    <rect x="22" y="100" width="276" height="380" rx="16" fill="#fdf6e6" stroke="#1f1812" stroke-width="2"/>
+    <text x="36" y="128" font-size="11" class="h" fill="#5a4a32">CLAUSE TYPE</text>
+    <text x="36" y="156" font-size="22" class="h" fill="#1f1812">non-solicit</text>
+
+    <!-- badge -->
+    <rect x="36" y="172" width="120" height="24" rx="12" fill="#7a3d3d"/>
+    <text x="96" y="190" font-size="12" class="h" fill="#fffaef" text-anchor="middle">⚠ unusual · CA</text>
+
+    <!-- verbatim -->
+    <text x="36" y="226" font-size="11" class="h" fill="#5a4a32">VERBATIM</text>
+    <text x="36" y="248" font-size="12" class="body" fill="#1f1812">"For 12 months, you may not</text>
+    <text x="36" y="266" font-size="12" class="body" fill="#1f1812">solicit, contact, or hire any</text>
+    <text x="36" y="284" font-size="12" class="body" fill="#1f1812">employee or contractor of</text>
+    <text x="36" y="302" font-size="12" class="body" fill="#1f1812">[Company]..."</text>
+
+    <!-- plain -->
+    <text x="36" y="328" font-size="11" class="h" fill="#3e6e63">PLAIN ENGLISH</text>
+    <text x="36" y="348" font-size="13" class="body" fill="#1f1812">you can't reach out to former</text>
+    <text x="36" y="366" font-size="13" class="body" fill="#1f1812">colleagues for jobs for a year.</text>
+    <text x="36" y="384" font-size="13" class="body" fill="#1f1812">in CA, this is broader than</text>
+    <text x="36" y="402" font-size="13" class="body" fill="#1f1812">typical (state law limits</text>
+    <text x="36" y="420" font-size="13" class="body" fill="#1f1812">enforceability).</text>
+
+    <!-- ask -->
+    <text x="36" y="450" font-size="11" class="h" fill="#5a3a4f">CONSIDER ASKING</text>
+    <text x="36" y="470" font-size="13" class="body" fill="#1f1812">"can we narrow this to direct</text>
+    <text x="36" y="488" font-size="13" class="body" fill="#1f1812">reports only?"</text>
+
+    <!-- nav -->
+    <text x="36" y="528" font-size="14" class="h" fill="#1f1812">← back</text>
+    <text x="284" y="528" font-size="14" class="h" fill="#1f1812" text-anchor="end">next clause →</text>
+    <line x1="22" y1="540" x2="298" y2="540" stroke="#c8b896" stroke-width="1"/>
+    <text x="160" y="558" font-size="11" class="body" fill="#5a4a32" text-anchor="middle">5 ●●●●● ○○○○ 9</text>
+  </g>
+  <text x="440" y="1480" font-size="18" class="note">06 · severance reviewer · clause card</text>
+  <text x="440" y="1504" font-size="18" class="note">card-deck. one clause at a time.</text>
+
+  <!-- ======================== SCREEN 7: RUNWAY EXPANDED ======================== -->
+  <g transform="translate(820 870)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">3:14</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">money</text>
+
+    <text x="22" y="84" font-size="13" class="body" fill="#5a4a32">← back</text>
+    <text x="22" y="118" font-size="22" class="h" fill="#1f1812">your runway</text>
+
+    <!-- the big number -->
+    <text x="160" y="220" font-size="72" class="h" fill="#1f1812" text-anchor="middle">5.7</text>
+    <text x="160" y="248" font-size="20" class="h" fill="#5a4a32" text-anchor="middle">months</text>
+    <text x="160" y="276" font-size="13" class="body" fill="#5a4a32" text-anchor="middle">at your current burn rate</text>
+
+    <!-- simple bar -->
+    <g transform="translate(22 300)">
+      <rect x="0" y="0" width="276" height="14" rx="7" fill="none" stroke="#1f1812" stroke-width="1.5"/>
+      <rect x="2" y="2" width="180" height="10" rx="5" fill="#1f1812"/>
+    </g>
+    <text x="22" y="334" font-size="11" class="body" fill="#5a4a32">today · day 4</text>
+    <text x="276" y="334" font-size="11" class="body" fill="#5a4a32" text-anchor="end">runs dry · oct 14</text>
+
+    <!-- extend runway -->
+    <text x="22" y="378" font-size="13" class="h" fill="#3e6e63">EXTEND BY $284 / mo · +0.4 mo</text>
+    <rect x="22" y="392" width="276" height="50" rx="10" fill="none" stroke="#1f1812" stroke-width="1.5"/>
+    <text x="36" y="414" font-size="13" class="body" fill="#1f1812">cancel: streaming, meal kit</text>
+    <text x="36" y="432" font-size="11" class="body" fill="#5a4a32">tap to audit (one-tap) →</text>
+
+    <!-- adjust -->
+    <text x="22" y="468" font-size="13" class="h" fill="#5a4a32">ADJUST</text>
+    <g class="body" font-size="13" fill="#1f1812">
+      <text x="22" y="490">+ household income</text>
+      <text x="22" y="510">+ severance schedule</text>
+      <text x="22" y="530">+ HSA / RRSP draw</text>
+    </g>
+  </g>
+  <text x="820" y="1480" font-size="18" class="note">07 · runway · the one number</text>
+  <text x="820" y="1504" font-size="18" class="note" fill="#7a3d3d">* never a chart. always a number. *</text>
+
+  <!-- ======================== SCREEN 8: DAY 30 WRAP-UP ======================== -->
+  <g transform="translate(1200 870)" filter="url(#rough)">
+    <rect x="0" y="0" width="320" height="580" rx="34" fill="none" stroke="#1f1812" stroke-width="3"/>
+    <rect x="6" y="6" width="308" height="568" rx="28" fill="#fffaef" stroke="#1f1812" stroke-width="1.5"/>
+    <rect x="120" y="14" width="80" height="14" rx="6" fill="#1f1812"/>
+    <text x="22" y="50" font-size="12" class="body" fill="#2a2014">7:46</text>
+    <text x="270" y="50" font-size="12" class="body" fill="#2a2014">day 30</text>
+
+    <text x="160" y="100" font-size="24" class="h" fill="#1f1812" text-anchor="middle">day 30.</text>
+    <text x="160" y="128" font-size="14" class="body" fill="#5a4a32" text-anchor="middle">you got through 30 days.</text>
+
+    <!-- "what you did" -->
+    <text x="22" y="170" font-size="13" class="h" fill="#3e6e63">WHAT YOU DID</text>
+    <g class="body" font-size="13" fill="#1f1812">
+      <text x="22" y="194">✓ filed CA EDD claim</text>
+      <text x="22" y="214">✓ chose Covered California</text>
+      <text x="22" y="234">✓ reviewed severance, signed day 9</text>
+      <text x="22" y="254">✓ rolled over 401(k) to IRA</text>
+      <text x="22" y="274">✓ posted to LinkedIn (day 5, draft 3)</text>
+      <text x="22" y="294">✓ saved $284/mo from subs</text>
+    </g>
+
+    <!-- "still pending" -->
+    <text x="22" y="328" font-size="13" class="h" fill="#7a5a1a">STILL PENDING</text>
+    <g class="body" font-size="13" fill="#1f1812">
+      <text x="22" y="352">○ first EDD payment ETA day 34</text>
+      <text x="22" y="372">○ 5 applications awaiting reply</text>
+    </g>
+
+    <!-- gentle exit -->
+    <rect x="22" y="402" width="276" height="92" rx="12" fill="#fdf6e6" stroke="#1f1812" stroke-width="1.5"/>
+    <text x="160" y="428" font-size="14" class="h" fill="#1f1812" text-anchor="middle">we'll step back now.</text>
+    <text x="160" y="450" font-size="13" class="body" fill="#5a4a32" text-anchor="middle">a weekly check-in is enough.</text>
+    <text x="160" y="470" font-size="13" class="body" fill="#5a4a32" text-anchor="middle">you don't need us every day</text>
+    <text x="160" y="486" font-size="13" class="body" fill="#5a4a32" text-anchor="middle">anymore.</text>
+
+    <rect x="50" y="512" width="220" height="44" rx="22" fill="#2a2014"/>
+    <text x="160" y="540" font-size="16" class="h" fill="#fffaef" text-anchor="middle">switch to weekly mode</text>
+  </g>
+  <text x="1200" y="1480" font-size="18" class="note">08 · day 30 wrap-up</text>
+  <text x="1200" y="1504" font-size="18" class="note" fill="#7a3d3d">* not "you did it!" — graceful exit *</text>
+
+  <!-- Footer -->
+  <text x="60" y="1430" font-size="20" class="note">— jenil · severance · paper round 2 of 3 —</text>
+</svg>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Severance — Usability Testing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-bar"><div class="inner">
+  <div class="nav-brand">severance<span class="dot">.</span> <small>UX Case Study</small></div>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="process.html">Process</a>
+    <a href="research.html">Research</a>
+    <a href="wireframes.html">Wireframes</a>
+    <a href="designs.html">Designs</a>
+    <a href="testing.html" class="active">Testing</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="about.html" class="nav-cta">Get in touch</a>
+</div></nav>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">PAGE 06 · DELIVER · TEST</div>
+    <h1 class="hero-h">Five participants.<br/>Nine issues.<br/>Two critical fixes.</h1>
+    <p class="lede">Moderated, remote, think-aloud usability testing produced a SUS of 84.5 ("excellent") and a calm-vs-panicked Likert of 4.6/5. Two critical issues found and fixed before final hand-off.</p>
+  </section>
+
+  <div class="toc">
+    <div class="label">ON THIS PAGE</div>
+    <ul>
+      <li>→ <a href="#headline">01 · Headline outcomes</a></li>
+      <li>→ <a href="#method">02 · Method &amp; participants</a></li>
+      <li>→ <a href="#tasks">03 · Per-task results</a></li>
+      <li>→ <a href="#issues">04 · Issues found, ranked by severity</a></li>
+      <li>→ <a href="#diff">05 · The v3 → v4 diff</a></li>
+    </ul>
+  </div>
+
+  <!-- HEADLINE -->
+  <section class="section" id="headline">
+    <div class="section-head">
+      <div class="eyebrow">01 · HEADLINE OUTCOMES</div>
+      <h2>Validated against six metrics.</h2>
+      <p>Pre-registered targets, post-test results. Every target met or exceeded except UI filing task success — that one was at 80% in v3 and projects to 100% after the v4 Texas-portal fix.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="stat"><div class="label">SUS</div><div class="num">84.5</div><div class="desc">"Excellent" · target ≥75</div></div>
+      <div class="stat"><div class="label">TASK SUCCESS</div><div class="num">91<small>%</small></div><div class="desc">Median · target ≥90%</div></div>
+      <div class="stat"><div class="label">TIME-TO-FIRST-ACTION</div><div class="num">0:39</div><div class="desc">Cold open · target &lt;0:45</div></div>
+      <div class="stat"><div class="label">TRUST LIKERT</div><div class="num">4.4<small>/5</small></div><div class="desc">"Trust this with finances" · target ≥4.0</div></div>
+      <div class="stat"><div class="label">CALM LIKERT</div><div class="num">4.6<small>/5</small></div><div class="desc">"Calmer not panicked" · target ≥4.0</div></div>
+      <div class="stat"><div class="label">WCAG 2.1 AA</div><div class="num">100<small>%</small></div><div class="desc">Of screens · Stark + manual</div></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- METHOD -->
+  <section class="section" id="method">
+    <div class="section-head">
+      <div class="eyebrow">02 · METHOD</div>
+      <h2>Moderated · think-aloud · 60 minutes each.</h2>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-num">FORMAT</div>
+        <div class="card-title">Remote Zoom · Figma prototype</div>
+        <div class="card-desc">5 sessions · 50 min recorded testing · 10 min SUS + debrief. Maze for task timing. Otter.ai for transcription.</div>
+      </div>
+      <div class="card">
+        <div class="card-num">SAMPLE</div>
+        <div class="card-title">5 participants from original interview pool</div>
+        <div class="card-desc">Diversity targets met: dependents + mortgage, single early-career, mid-50s long tenure, hostile-portal state (TX), Canadian (EI flow).</div>
+      </div>
+      <div class="card">
+        <div class="card-num">INSTRUMENTS</div>
+        <div class="card-title">SUS · 3 custom Likerts · open Q</div>
+        <div class="card-desc">Standard SUS 10-item. Custom: calm-vs-panicked, respected-emotional-state, trust-with-finances. Open: "what would you change?"</div>
+      </div>
+      <div class="card">
+        <div class="card-num">ETHICS</div>
+        <div class="card-title">Crisis-line protocol prepared</div>
+        <div class="card-desc">Recently-laid-off participants are vulnerable. Opt-out language at every transition. 988 (US) / 988 (CA) at hand if disclosed.</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 48px;">Test panel</h3>
+    <table>
+      <thead><tr><th>ID</th><th>Industry</th><th>Region</th><th>Layoff window</th><th>Persona archetype</th></tr></thead>
+      <tbody>
+        <tr><td>T01</td><td>SaaS</td><td>California</td><td>6 wk ago</td><td>Maya</td></tr>
+        <tr><td>T02</td><td>Crypto</td><td>Ontario</td><td>4 mo ago</td><td>Daniel</td></tr>
+        <tr><td>T03</td><td>Banking</td><td>North Carolina</td><td>3 mo ago</td><td>Robert (age 52)</td></tr>
+        <tr><td>T04</td><td>Media</td><td>Texas</td><td>9 mo ago</td><td>Edge case (TX hostile portal)</td></tr>
+        <tr><td>T05</td><td>Healthcare admin</td><td>Illinois</td><td>2 mo ago</td><td>Joanne</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TASKS -->
+  <section class="section" id="tasks">
+    <div class="section-head">
+      <div class="eyebrow">03 · PER-TASK RESULTS</div>
+      <h2>Seven tasks. Five participants.</h2>
+    </div>
+
+    <table>
+      <thead><tr><th>Task</th><th>T01</th><th>T02</th><th>T03</th><th>T04</th><th>T05</th><th>Success</th></tr></thead>
+      <tbody>
+        <tr><td>1. Onboarding completion</td><td>✓ 5:14</td><td>✓ 4:42</td><td>✓ 7:08</td><td>✓ 6:31</td><td>✓ 5:47</td><td><strong>100%</strong></td></tr>
+        <tr><td>2. Find today's action</td><td>✓ 0:31</td><td>✓ 0:24</td><td>✓ 0:42</td><td>✓ 0:39</td><td>✓ 0:51</td><td><strong>100%</strong></td></tr>
+        <tr><td>3. File unemployment</td><td>✓</td><td>✓</td><td>✗ → fix</td><td>✓</td><td>✓</td><td>80%</td></tr>
+        <tr><td>4. Review severance</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td><strong>100%</strong></td></tr>
+        <tr><td>5. Calm-mode reaction</td><td>+</td><td>+</td><td>– (fix)</td><td>+</td><td>+</td><td>80% pos</td></tr>
+        <tr><td>6. Day 30 wrap-up</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td><strong>100% pos</strong></td></tr>
+        <tr><td>7a. Find runway calc</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td><strong>100%</strong></td></tr>
+        <tr><td>7b. Add spouse income</td><td>✓</td><td>✗</td><td>✓</td><td>n/a</td><td>✓</td><td>75%</td></tr>
+        <tr><td>7c. Find 401(k) rollover</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✗</td><td>80%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ISSUES -->
+  <section class="section" id="issues">
+    <div class="section-head">
+      <div class="eyebrow">04 · ISSUES</div>
+      <h2>Nine issues, ranked by severity.</h2>
+      <p>Two critical (severity 4), one major (severity 3), three moderate (severity 2), three minor (severity 1). Severity 3 and 4 fixed before final hand-off.</p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <div class="card" style="border-left: 4px solid var(--coral);">
+        <div class="tag-row"><span class="tag coral">CRITICAL · sev 4</span></div>
+        <div class="card-title">Severance signing banner felt coercive</div>
+        <blockquote style="font-size: 14px; padding: 10px 14px; margin: 12px 0;">"This red banner saying '9 days remaining' on the home screen — I literally said in our interview that the <em>employer</em> sending me three reminder emails to sign felt aggressive. Now you're doing it too." <cite>— T01</cite></blockquote>
+        <p style="font-size: 13px; color: var(--text-2);"><strong>Fix in v4:</strong> Banner now amber not coral. Only appears when &lt;72 hours remain (was &lt;14 days). Dismissable for the day.</p>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--coral);">
+        <div class="tag-row"><span class="tag coral">CRITICAL · sev 4</span></div>
+        <div class="card-title">Texas state-portal fallback was missing</div>
+        <blockquote style="font-size: 14px; padding: 10px 14px; margin: 12px 0;">"The TWC portal is down constantly. What does Severance do when it's down? Right now this just punts me there and I get a 503." <cite>— T04</cite></blockquote>
+        <p style="font-size: 13px; color: var(--text-2);"><strong>Fix in v4:</strong> Server-status check before redirect. Graceful "portal down, draft saved, retry" copy. Phone-filing path surfaced for TX.</p>
+      </div>
+
+      <div class="card" style="border-left: 4px solid var(--amber); grid-column: span 2;">
+        <div class="tag-row"><span class="tag amber">MAJOR · sev 3</span></div>
+        <div class="card-title">Calm mode felt patronizing to T03</div>
+        <blockquote style="font-size: 14px; padding: 10px 14px; margin: 12px 0;">"'It's day 2. The world can wait.' I'm 52. I have a 19-year-old in college. I have a mortgage. The world is <em>not</em> waiting. I get what you're trying to do but to me, this reads like you think I'm a fragile person." <cite>— T03</cite></blockquote>
+        <p style="font-size: 13px; color: var(--text-2);"><strong>Fix in v4:</strong> Calm mode now skippable for users who self-identify as ready. Copy revised: "the world can wait" → "we'll be steady." Tone moves from <em>protective</em> to <em>companionable</em>.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag-row"><span class="tag teal">MODERATE · sev 2</span></div>
+        <div class="card-title">Spouse income pathway hidden</div>
+        <p style="font-size: 13px; color: var(--text-2);">T02 went Money → Adjust → Profile. <strong>Fix:</strong> inline modal in Money instead.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag-row"><span class="tag teal">MODERATE · sev 2</span></div>
+        <div class="card-title">401(k) rollover discoverability</div>
+        <p style="font-size: 13px; color: var(--text-2);">T05 looked in 3 places. <strong>Fix:</strong> cross-listed in both Money and Documents.</p>
+      </div>
+
+      <div class="card">
+        <div class="tag-row"><span class="tag teal">MODERATE · sev 2</span></div>
+        <div class="card-title">"What's COBRA?" sub-question</div>
+        <p style="font-size: 13px; color: var(--text-2);">T05: "The app uses the acronym like I know what it means." <strong>Fix:</strong> tappable "?" affordance + first-mention underline.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- DIFF -->
+  <section class="section" id="diff">
+    <div class="section-head">
+      <div class="eyebrow">05 · v3 → v4</div>
+      <h2>Eleven changes. Tracked. Shipped.</h2>
+    </div>
+
+    <table>
+      <thead><tr><th>Area</th><th>v3 (tested)</th><th>v4 (final)</th></tr></thead>
+      <tbody>
+        <tr><td>Banner color (severance window)</td><td>Coral</td><td>Amber + dismissable</td></tr>
+        <tr><td>Banner trigger window</td><td>&lt;14 days</td><td>&lt;72 hours</td></tr>
+        <tr><td>State portal fallback</td><td>Missing</td><td>Server-status check + draft save</td></tr>
+        <tr><td>Calm mode</td><td>Auto, "world can wait"</td><td>Auto with skippable, "we'll be steady"</td></tr>
+        <tr><td>Spouse income edit</td><td>Profile-only</td><td>Inline modal in Money</td></tr>
+        <tr><td>401(k) discoverability</td><td>Money only</td><td>Cross-listed in Money + Documents</td></tr>
+        <tr><td>Acronyms</td><td>Bare</td><td>Tappable "?" + first-mention underline</td></tr>
+        <tr><td>Pagination dots</td><td>6px</td><td>8px + numeric label</td></tr>
+        <tr><td>Day-timeline future tap</td><td>None</td><td>Peek preview</td></tr>
+        <tr><td>Pause placement</td><td>Beside Continue</td><td>Top-right of app bar</td></tr>
+        <tr><td>Privacy disclosure access</td><td>Settings only</td><td>Lock affordance on every data screen</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top: 24px;">The hi-fi mockups in <a href="designs.html" style="color: var(--coral);">Final Designs</a> reflect v4. The v3 → v4 changes that involved emotional copy were reviewed by a friend with lived experience as a one-cycle critique before final.</p>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <h2 style="margin: 0 0 14px;">That's the work.</h2>
+    <p style="margin: 0 auto 32px; max-width: 540px;">Want to talk about it? I'd love to.</p>
+    <a href="about.html" class="btn btn-primary">Get in touch →</a>
+  </section>
+
+</main>
+
+<footer class="site-footer"><div class="inner">
+  <div>
+    <div class="brand">severance<span class="dot">.</span></div>
+    <div class="meta">UX Case Study · Designed by Jenil Gohel · 2026</div>
+  </div>
+  <div class="links">
+    <a href="index.html">Overview</a>
+    <a href="about.html">About</a>
+    <a href="mailto:jgohel9902@gmail.com">Email</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

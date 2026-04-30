@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7f3ed"/>
+      <stop offset="1" stop-color="#f0e9dd"/>
+    </linearGradient>
+    <linearGradient id="emoGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#7a3d3d"/>
+      <stop offset="0.4" stop-color="#c46a5a"/>
+      <stop offset="1" stop-color="#3e6e63"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="60" y="60" font-size="32" font-weight="700" fill="#1a2332">Severance — User Journey Map</text>
+  <text x="60" y="92" font-size="16" fill="#5a6470">Anchored on Maya (Persona 1). Divergences for Joanne and Daniel noted in italics.</text>
+  <text x="60" y="116" font-size="13" fill="#8a8478" font-style="italic">First 30 days after a layoff · 5 phases · cross-functional view</text>
+
+  <!-- Phase headers -->
+  <g font-size="15" font-weight="700" fill="#1a2332">
+    <rect x="60" y="150" width="290" height="46" rx="8" fill="#1a2332"/>
+    <text x="78" y="180" fill="#f5f0e8">Phase 1 · The Meeting</text>
+    <text x="78" y="172" fill="#d4a259" font-size="10" font-weight="500">DAY 0 · 3 hrs</text>
+
+    <rect x="360" y="150" width="290" height="46" rx="8" fill="#1a2332"/>
+    <text x="378" y="180" fill="#f5f0e8">Phase 2 · Shock Window</text>
+    <text x="378" y="172" fill="#d4a259" font-size="10" font-weight="500">DAYS 1–3</text>
+
+    <rect x="660" y="150" width="290" height="46" rx="8" fill="#1a2332"/>
+    <text x="678" y="180" fill="#f5f0e8">Phase 3 · Paperwork Sprint</text>
+    <text x="678" y="172" fill="#d4a259" font-size="10" font-weight="500">DAYS 4–10</text>
+
+    <rect x="960" y="150" width="290" height="46" rx="8" fill="#1a2332"/>
+    <text x="978" y="180" fill="#f5f0e8">Phase 4 · Recalibration</text>
+    <text x="978" y="172" fill="#d4a259" font-size="10" font-weight="500">DAYS 11–20</text>
+
+    <rect x="1260" y="150" width="290" height="46" rx="8" fill="#1a2332"/>
+    <text x="1278" y="180" fill="#f5f0e8">Phase 5 · Reentry Prep</text>
+    <text x="1278" y="172" fill="#d4a259" font-size="10" font-weight="500">DAYS 21–30</text>
+  </g>
+
+  <!-- Row labels (left gutter) -->
+  <g font-size="11" font-weight="700" fill="#8a8478" text-transform="uppercase">
+    <text x="20" y="240" transform="rotate(-90 20 240)">ACTIONS</text>
+    <text x="20" y="370" transform="rotate(-90 20 370)">THOUGHTS</text>
+    <text x="20" y="540" transform="rotate(-90 20 540)">EMOTION</text>
+    <text x="20" y="780" transform="rotate(-90 20 780)">PAIN POINTS</text>
+    <text x="20" y="970" transform="rotate(-90 20 970)">OPPORTUNITY</text>
+  </g>
+
+  <!-- ACTIONS row -->
+  <g font-size="12" fill="#2c3540">
+    <rect x="60" y="210" width="290" height="120" rx="6" fill="#ffffff" stroke="#e0d8c8"/>
+    <text x="76" y="232" font-weight="600">Joins layoff Zoom</text>
+    <text x="76" y="252">Listens to HR script</text>
+    <text x="76" y="272">Receives severance PDF</text>
+    <text x="76" y="292">Loses Slack access mid-call</text>
+    <text x="76" y="312">Closes laptop</text>
+
+    <rect x="360" y="210" width="290" height="120" rx="6" fill="#ffffff" stroke="#e0d8c8"/>
+    <text x="376" y="232" font-weight="600">Tells partner / parents</text>
+    <text x="376" y="252">Forwards severance to personal email</text>
+    <text x="376" y="272">Reads ~⅓ of severance doc</text>
+    <text x="376" y="292">Joins r/Layoffs</text>
+    <text x="376" y="312">Lies awake at night</text>
+
+    <rect x="660" y="210" width="290" height="120" rx="6" fill="#ffffff" stroke="#e0d8c8"/>
+    <text x="676" y="232" font-weight="600">Files state UI claim</text>
+    <text x="676" y="252">Reads severance with partner</text>
+    <text x="676" y="272">Picks COBRA vs. ACA</text>
+    <text x="676" y="292">Cancels subscriptions</text>
+    <text x="676" y="312">Updates LinkedIn (often poorly)</text>
+
+    <rect x="960" y="210" width="290" height="120" rx="6" fill="#ffffff" stroke="#e0d8c8"/>
+    <text x="976" y="232" font-weight="600">Checks runway daily</text>
+    <text x="976" y="252">Sends warm-network DMs</text>
+    <text x="976" y="272">Begins applications</text>
+    <text x="976" y="292">Schedules first coffee chat</text>
+    <text x="976" y="312">Possibly starts therapy</text>
+
+    <rect x="1260" y="210" width="290" height="120" rx="6" fill="#ffffff" stroke="#e0d8c8"/>
+    <text x="1276" y="232" font-weight="600">Steady search rhythm</text>
+    <text x="1276" y="252">1–2 info calls / week</text>
+    <text x="1276" y="272">Refines positioning</text>
+    <text x="1276" y="292">Mentions layoff casually</text>
+    <text x="1276" y="312">Reflects on what to keep</text>
+  </g>
+
+  <!-- THOUGHTS row -->
+  <g font-size="12" fill="#2c3540" font-style="italic">
+    <rect x="60" y="350" width="290" height="100" rx="6" fill="#fdf8ee" stroke="#e6dcc4"/>
+    <text x="76" y="376">"Did I see this coming?"</text>
+    <text x="76" y="396">"What do I do for the rest of today?"</text>
+    <text x="76" y="416">"Is this real?"</text>
+
+    <rect x="360" y="350" width="290" height="100" rx="6" fill="#fdf8ee" stroke="#e6dcc4"/>
+    <text x="376" y="376">"I should be doing more."</text>
+    <text x="376" y="396">"I should be doing less."</text>
+    <text x="376" y="416">"Both feel wrong."</text>
+
+    <rect x="660" y="350" width="290" height="100" rx="6" fill="#fdf8ee" stroke="#e6dcc4"/>
+    <text x="676" y="376">"Am I doing this in the right order?"</text>
+    <text x="676" y="396">"Am I leaving money on the table?"</text>
+    <text x="676" y="416">"Will I get this wrong?"</text>
+
+    <rect x="960" y="350" width="290" height="100" rx="6" fill="#fdf8ee" stroke="#e6dcc4"/>
+    <text x="976" y="376">"How long can I afford to wait?"</text>
+    <text x="976" y="396">"Is the right job out there?"</text>
+    <text x="976" y="416">"Why no callbacks?"</text>
+
+    <rect x="1260" y="350" width="290" height="100" rx="6" fill="#fdf8ee" stroke="#e6dcc4"/>
+    <text x="1276" y="376">"I'm not the same person I was Day 0."</text>
+    <text x="1276" y="396">"Is that OK?"</text>
+    <text x="1276" y="416">"It might be OK."</text>
+  </g>
+
+  <!-- EMOTION curve -->
+  <g>
+    <rect x="60" y="470" width="1490" height="160" rx="6" fill="#ffffff" stroke="#e0d8c8"/>
+    <!-- gridlines -->
+    <line x1="60" y1="500" x2="1550" y2="500" stroke="#f0e8d8" stroke-dasharray="4 4"/>
+    <line x1="60" y1="550" x2="1550" y2="550" stroke="#e0d8c8"/>
+    <line x1="60" y1="600" x2="1550" y2="600" stroke="#f0e8d8" stroke-dasharray="4 4"/>
+    <text x="46" y="502" font-size="9" fill="#a89e8a" text-anchor="end">+</text>
+    <text x="46" y="552" font-size="9" fill="#a89e8a" text-anchor="end">0</text>
+    <text x="46" y="602" font-size="9" fill="#a89e8a" text-anchor="end">−</text>
+    <!-- curve -->
+    <path d="M 80 530 L 200 580 L 280 615 L 360 605 L 500 590 L 600 580 L 680 560 L 800 540 L 900 530 L 980 520 L 1100 510 L 1200 500 L 1300 495 L 1450 488 L 1540 488"
+          fill="none" stroke="url(#emoGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- key moments -->
+    <circle cx="280" cy="615" r="6" fill="#7a3d3d"/>
+    <text x="290" y="612" font-size="11" fill="#7a3d3d" font-weight="600">Lowest point · Day 2</text>
+    <circle cx="680" cy="560" r="6" fill="#c46a5a"/>
+    <text x="690" y="557" font-size="11" fill="#c46a5a" font-weight="600">First task complete</text>
+    <circle cx="1100" cy="510" r="6" fill="#3e6e63"/>
+    <text x="1110" y="507" font-size="11" fill="#3e6e63" font-weight="600">Runway clarity</text>
+    <circle cx="1450" cy="488" r="6" fill="#3e6e63"/>
+    <text x="1340" y="478" font-size="11" fill="#3e6e63" font-weight="600">Acceptance</text>
+  </g>
+
+  <!-- PAIN POINTS row -->
+  <g font-size="12" fill="#2c3540">
+    <rect x="60" y="660" width="290" height="180" rx="6" fill="#fbeeec" stroke="#e8c8c0"/>
+    <text x="76" y="684" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="86" y="684">Loss of access mid-call</text>
+    <text x="76" y="704" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="86" y="704">No copy of contacts</text>
+    <text x="76" y="724" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="86" y="724">PDF gated behind HR portal</text>
+
+    <rect x="360" y="660" width="290" height="180" rx="6" fill="#fbeeec" stroke="#e8c8c0"/>
+    <text x="376" y="684" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="386" y="684">Family disclosure choreography</text>
+    <text x="376" y="704" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="386" y="704">Premature LinkedIn posts</text>
+    <text x="376" y="724" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="386" y="724">Severance signing rushed</text>
+    <text x="376" y="744" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="386" y="744">Sleep loss / catastrophizing</text>
+
+    <rect x="660" y="660" width="290" height="180" rx="6" fill="#fbeeec" stroke="#e8c8c0"/>
+    <text x="676" y="684" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="686" y="684">State UI portal usability</text>
+    <text x="676" y="704" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="686" y="704">Severance legalese</text>
+    <text x="676" y="724" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="686" y="724">COBRA / ACA confusion</text>
+    <text x="676" y="744" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="686" y="744">10 logins to cancel subs</text>
+    <text x="676" y="764" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="686" y="764">ROE delay (Canada)</text>
+
+    <rect x="960" y="660" width="290" height="180" rx="6" fill="#fbeeec" stroke="#e8c8c0"/>
+    <text x="976" y="684" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="986" y="684">Runway anxiety on bad days</text>
+    <text x="976" y="704" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="986" y="704">Application rejection rates</text>
+    <text x="976" y="724" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="986" y="724">Identity crisis on role/industry</text>
+    <text x="976" y="744" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="986" y="744">Friday-afternoon dips</text>
+
+    <rect x="1260" y="660" width="290" height="180" rx="6" fill="#fbeeec" stroke="#e8c8c0"/>
+    <text x="1276" y="684" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="1286" y="684">Long application response gaps</text>
+    <text x="1276" y="704" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="1286" y="704">Holidays re-trigger grief</text>
+    <text x="1276" y="724" font-weight="700" fill="#7a3d3d">·</text>
+    <text x="1286" y="724">Long-arc identity questions</text>
+  </g>
+
+  <!-- OPPORTUNITY row -->
+  <g font-size="12" fill="#1a2332">
+    <rect x="60" y="860" width="290" height="180" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+    <text x="76" y="886" font-weight="700" fill="#3e6e63">CANNOT REACH USER YET</text>
+    <text x="76" y="908">Earn position via reputation.</text>
+    <text x="76" y="928">SEO content on "what to do today after layoff."</text>
+    <text x="76" y="948">Trusted referrals from r/Layoffs, HR pros.</text>
+
+    <rect x="360" y="860" width="290" height="180" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+    <text x="376" y="886" font-weight="700" fill="#3e6e63">FIRST IMPRESSION = WHOLE GAME</text>
+    <text x="376" y="908">Onboarding in &lt; 8 min.</text>
+    <text x="376" y="928">Day 1–3 plan is mostly empty.</text>
+    <text x="376" y="948">Restraint earns trust.</text>
+    <text x="376" y="968">"Don't post LinkedIn yet."</text>
+
+    <rect x="660" y="860" width="290" height="180" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+    <text x="676" y="886" font-weight="700" fill="#3e6e63">PRODUCT EARNS ITS PLACE</text>
+    <text x="676" y="908">UI Filing Helper</text>
+    <text x="676" y="928">Severance Reviewer</text>
+    <text x="676" y="948">Health Insurance Decision Tool</text>
+    <text x="676" y="968">One action / day on home.</text>
+
+    <rect x="960" y="860" width="290" height="180" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+    <text x="976" y="886" font-weight="700" fill="#3e6e63">RUNWAY = EMOTIONAL ANCHOR</text>
+    <text x="976" y="908">Runway tile on home.</text>
+    <text x="976" y="928">Weekly check-in adjusts pacing.</text>
+    <text x="976" y="948">"Extend runway" suggestions.</text>
+    <text x="976" y="968">Stay in lane — not a job board.</text>
+
+    <rect x="1260" y="860" width="290" height="180" rx="6" fill="#e8f0ed" stroke="#9ec4b9"/>
+    <text x="1276" y="886" font-weight="700" fill="#3e6e63">GRACEFUL EXIT</text>
+    <text x="1276" y="908">Day 30 wrap-up summary.</text>
+    <text x="1276" y="928">Step back to weekly check-ins.</text>
+    <text x="1276" y="948">Reflection module.</text>
+    <text x="1276" y="968">Don't hold the user prisoner.</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="60" y="1075" font-size="11" fill="#8a8478" font-style="italic">Five phases · 30 days · designed by Jenil Gohel · Severance UX Project</text>
+</svg>

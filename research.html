@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Severance — Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav-bar"><div class="inner">
+  <div class="nav-brand">severance<span class="dot">.</span> <small>UX Case Study</small></div>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <a href="process.html">Process</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="wireframes.html">Wireframes</a>
+    <a href="designs.html">Designs</a>
+    <a href="testing.html">Testing</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="about.html" class="nav-cta">Get in touch</a>
+</div></nav>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">PAGE 03 · DISCOVER + DEFINE</div>
+    <h1 class="hero-h">10 interviews.<br/>5 themes.<br/>3 personas.</h1>
+    <p class="lede">The qualitative research that shaped every design decision. The single most consequential finding: users don't lack information — they lack <em>ordering</em>.</p>
+  </section>
+
+  <div class="toc">
+    <div class="label">ON THIS PAGE</div>
+    <ul>
+      <li>→ <a href="#interviews">01 · Interview transcripts (excerpted)</a></li>
+      <li>→ <a href="#themes">02 · Five synthesized themes</a></li>
+      <li>→ <a href="#personas">03 · Three personas</a></li>
+      <li>→ <a href="#journey">04 · The user journey map</a></li>
+      <li>→ <a href="#ia">05 · Information architecture</a></li>
+      <li>→ <a href="#flows">06 · User flows</a></li>
+    </ul>
+  </div>
+
+  <!-- INTERVIEWS -->
+  <section class="section" id="interviews">
+    <div class="section-head">
+      <div class="eyebrow">01 · INTERVIEWS</div>
+      <h2>Excerpts from the 10 conversations.</h2>
+      <p>Each interview ran ~60 minutes, recorded with consent and transcribed. Below are excerpts that shaped specific design decisions — the full transcripts (anonymized) are in the source repository.</p>
+    </div>
+
+    <div class="grid grid-2">
+
+      <div class="card">
+        <div class="card-num">P01 · MAYA · SAAS · CALIFORNIA</div>
+        <div class="card-title">Senior PM · 4 years tenure · 6 weeks ago</div>
+        <blockquote>"I'm a project manager. I literally do this for a living and I couldn't see my own next step. The information was all out there. I just couldn't sequence it."</blockquote>
+        <p style="font-size: 13px; color: var(--text-3);"><strong>Design takeaway:</strong> Sequencing is the #1 felt need. Confirmed by every later interview. Drove the home screen design.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">P02 · DANIEL · CRYPTO · ONTARIO</div>
+        <div class="card-title">Software Engineer · 2 years · 4 mo ago</div>
+        <blockquote>"I posted my CV on LinkedIn within four hours. I think it made me look desperate. Three of my close friends DM'd me afterwards saying 'you should have called me first.'"</blockquote>
+        <p style="font-size: 13px; color: var(--text-3);"><strong>Design takeaway:</strong> The "update LinkedIn" decision is sequenced. The product holds Daniel back from a Day-1 post.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">P05 · JOANNE · HEALTHCARE · ILLINOIS</div>
+        <div class="card-title">Operations Lead · 3 years · 2 mo ago</div>
+        <blockquote>"The first three days, do nothing. The next four days, do paperwork. After that you can be a person again."</blockquote>
+        <p style="font-size: 13px; color: var(--text-3);"><strong>Design takeaway:</strong> Days 1–3 are not productive days. Drove calm-mode design.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">P09 · MARCUS · AI STARTUP · WASHINGTON</div>
+        <div class="card-title">Marketing Manager · 1 year · 5 wk ago</div>
+        <blockquote>"A thing that takes the dollar amount of what I have, the dollar amount of what I owe, and tells me how many months I can survive. Because that's the question I wake up at 4 AM with."</blockquote>
+        <p style="font-size: 13px; color: var(--text-3);"><strong>Design takeaway:</strong> Runway is one number, not a chart. Most-cited financial want.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">P03 · LINA · RETAIL · NEW YORK</div>
+        <div class="card-title">Senior Buyer · 8 years · 6 mo ago</div>
+        <blockquote>"Are we going to be okay? — quoted from her teenager that night. The question I think about every day. I'm not a failure. But the feeling was there."</blockquote>
+        <p style="font-size: 13px; color: var(--text-3);"><strong>Design takeaway:</strong> Severance is a household event, not an individual one. Captured in onboarding.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">P08 · AANYA · EDTECH · BOSTON</div>
+        <div class="card-title">CSM · 2 years · 7 mo ago · OPT visa</div>
+        <blockquote>"OPT extension. So I had 60 days from termination to either find a new job, transfer my SEVIS, or leave the country. The 60-day clock was my whole world."</blockquote>
+        <p style="font-size: 13px; color: var(--text-3);"><strong>Design takeaway:</strong> Visa status changes everything. Onboarding asks. Visa pathway is v1.1 priority.</p>
+      </div>
+
+    </div>
+
+    <p style="margin-top: 32px; font-size: 14px; color: var(--text-3);">Four additional interviews (P04 Ramon, P06 Eli, P07 Robert, P10 Sylvie) also informed the design — full excerpts in the source repository's <code>03-Sample-Interviews.md</code>.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- THEMES -->
+  <section class="section" id="themes">
+    <div class="section-head">
+      <div class="eyebrow">02 · SYNTHESIS</div>
+      <h2>Five themes from 280 sticky notes.</h2>
+      <p>Three rounds of clustering reduced 280 quote-level notes to five themes. Each theme mapped 1:1 to a design principle.</p>
+    </div>
+
+    <table>
+      <thead><tr><th>Theme</th><th>Cluster size</th><th>→ Design principle</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Sequencing</strong> — "tell me what to do today"</td><td>22%</td><td>The home is a plan, not a feed.</td></tr>
+        <tr><td><strong>Shock window</strong> — first 3 days are not productive</td><td>18%</td><td>The first three days are slow on purpose.</td></tr>
+        <tr><td><strong>Household</strong> — partner, kids, parents, providers</td><td>16%</td><td>Onboarding captures the whole house.</td></tr>
+        <tr><td><strong>Trust by specificity</strong> — peer voice over authority</td><td>14%</td><td>No generic content. State + situation, always.</td></tr>
+        <tr><td><strong>Runway anxiety</strong> — money as psychological state</td><td>12%</td><td>One number, not a chart.</td></tr>
+        <tr><td colspan="3" style="font-size: 13px; color: var(--text-3); font-style: italic;">Remaining 18% scattered across smaller clusters: networking, resume rewriting, outplacement experiences, visa stories, industry-specific patterns.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PERSONAS -->
+  <section class="section" id="personas">
+    <div class="section-head">
+      <div class="eyebrow">03 · PERSONAS</div>
+      <h2>Three personas, drawn from composites.</h2>
+      <p>Each persona is built from at least three real interviews to avoid anchoring to one story.</p>
+    </div>
+
+    <div class="grid grid-3">
+
+      <div class="persona">
+        <div class="avatar">M</div>
+        <div class="name">Maya Chen</div>
+        <div class="role">34 · Senior PM · Oakland, CA</div>
+        <div class="bio"><strong>The mid-career professional with dependents and a mortgage.</strong> Spouse, 5-year-old. SaaS PM laid off after 4 years. 12 weeks severance. The cognitive overhead of identifying the next correct action is what stalls her, not the work itself.</div>
+        <div class="quote-mini">"Tell me what to do today. The information is out there. I just can't sequence it."</div>
+      </div>
+
+      <div class="persona">
+        <div class="avatar">J</div>
+        <div class="name">Joanne Walker</div>
+        <div class="role">47 · Ops Lead · Chicago, IL</div>
+        <div class="bio"><strong>The financial backbone with multi-generational responsibility.</strong> Covers parents' Medicare supplement, mortgage, two-household financial responsibility. Body cannot do paperwork in days 1–3.</div>
+        <div class="quote-mini">"The first three days, do nothing. The next four, do paperwork. After that I can be a person again."</div>
+      </div>
+
+      <div class="persona">
+        <div class="avatar">D</div>
+        <div class="name">Daniel Park</div>
+        <div class="role">28 · Engineer · Toronto, ON</div>
+        <div class="bio"><strong>The early-career employee, single, mobile-first.</strong> $14k savings, no dependents. Wants a friend who happens to be an HR lawyer. Not a chatbot. A calm voice.</div>
+        <div class="quote-mini">"The offer is the floor, not the ceiling. Take a week to think — I wish I'd known."</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- JOURNEY -->
+  <section class="section" id="journey">
+    <div class="section-head">
+      <div class="eyebrow">04 · JOURNEY MAP</div>
+      <h2>Five phases of the first 30 days.</h2>
+      <p>The Meeting · Shock Window · Paperwork Sprint · Recalibration · Reentry Prep. Each with its own emotional valence and product opportunity.</p>
+    </div>
+    <div class="showcase">
+      <div class="showcase-caption">
+        <div>
+          <div class="label">JOURNEY MAP</div>
+          <div class="title">First 30 days — anchored on Maya</div>
+        </div>
+        <div class="meta">SVG · scroll horizontally if needed</div>
+      </div>
+      <object data="assets/user-journey-map.svg" type="image/svg+xml" style="width: 100%; min-height: 700px;"></object>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- IA -->
+  <section class="section" id="ia">
+    <div class="section-head">
+      <div class="eyebrow">05 · INFORMATION ARCHITECTURE</div>
+      <h2>Card-sort, tree-test, sitemap.</h2>
+      <p>The IA went through three iterations. The final tree-test (n=12) measured 90% average task success — up from 67% in v1, driven by cross-listing and deep-linking, not navigation depth.</p>
+    </div>
+    <div class="showcase">
+      <div class="showcase-caption">
+        <div>
+          <div class="label">SITEMAP · v3</div>
+          <div class="title">5-tab bottom nav · cross-listed surfaces</div>
+        </div>
+        <div class="meta">Post-tree-test corrections</div>
+      </div>
+      <object data="assets/information-architecture.svg" type="image/svg+xml" style="width: 100%; min-height: 700px;"></object>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FLOWS -->
+  <section class="section" id="flows">
+    <div class="section-head">
+      <div class="eyebrow">06 · USER FLOWS</div>
+      <h2>Three primary flows, mapped end-to-end.</h2>
+      <p>Onboarding · file unemployment · severance reviewer. Each with decision points, error handling, and shared design patterns documented.</p>
+    </div>
+    <div class="showcase">
+      <div class="showcase-caption">
+        <div>
+          <div class="label">USER FLOWS</div>
+          <div class="title">3 primary flows — anchored on personas</div>
+        </div>
+        <div class="meta">Pause / Resume on every screen of every flow</div>
+      </div>
+      <object data="assets/user-flows.svg" type="image/svg+xml" style="width: 100%; min-height: 1000px;"></object>
+    </div>
+  </section>
+
+  <section class="section" style="text-align: center;">
+    <h2 style="margin: 0 0 14px;">From research to design.</h2>
+    <p style="margin: 0 auto 32px; max-width: 540px;">Next: how those five themes turned into 8 wireframed screens.</p>
+    <a href="wireframes.html" class="btn btn-primary">See the Wireframes →</a>
+  </section>
+
+</main>
+
+<footer class="site-footer"><div class="inner">
+  <div>
+    <div class="brand">severance<span class="dot">.</span></div>
+    <div class="meta">UX Case Study · Designed by Jenil Gohel · 2026</div>
+  </div>
+  <div class="links">
+    <a href="index.html">Overview</a>
+    <a href="about.html">About</a>
+    <a href="mailto:jgohel9902@gmail.com">Email</a>
+  </div>
+</div></footer>
+
+</body>
+</html>

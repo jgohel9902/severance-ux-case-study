@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Severance — Final Designs · Case Study</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Dark mode tokens */
+    --bg-deep: #07090d;
+    --bg:        #0c1018;
+    --surface:   #141a24;
+    --surface-2: #1c2332;
+    --surface-3: #232c3d;
+    --hairline:  #2a3346;
+
+    --text:       #f0e9d8;
+    --text-2:     #a8a499;
+    --text-3:     #6a6a72;
+    --text-mute:  #4d5260;
+
+    --coral:    #e87a6a;
+    --coral-d:  #c5594a;
+    --coral-bg: rgba(232,122,106,0.12);
+    --teal:     #7cc0b3;
+    --teal-bg:  rgba(124,192,179,0.12);
+    --amber:    #e6b56a;
+    --amber-bg: rgba(230,181,106,0.12);
+    --plum:     #c9a3bf;
+    --plum-bg:  rgba(201,163,191,0.12);
+
+    --gold-eyebrow: #d4a259;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg-deep); color: var(--text); font-family: 'Inter', -apple-system, system-ui, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(232,122,106,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 30%, rgba(124,192,179,0.05) 0%, transparent 50%),
+      linear-gradient(180deg, #07090d 0%, #0c1018 50%, #07090d 100%);
+  }
+
+  .wrap { max-width: 1600px; margin: 0 auto; padding: 80px 32px 120px; }
+
+  /* ============== HERO ============== */
+  header.hero { margin-bottom: 80px; max-width: 920px; }
+  header.hero .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.18em;
+    color: var(--coral); text-transform: uppercase; margin-bottom: 18px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  header.hero .eyebrow::before {
+    content: ''; width: 32px; height: 1px; background: var(--coral);
+  }
+  header.hero h1 {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 68px; font-weight: 800; letter-spacing: -0.035em;
+    line-height: 1.02; margin-bottom: 20px;
+    background: linear-gradient(180deg, #f5efe2 0%, #d4cab4 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  header.hero p { font-size: 19px; color: var(--text-2); max-width: 720px; line-height: 1.55; }
+  header.hero .meta {
+    display: flex; gap: 32px; flex-wrap: wrap; margin-top: 36px;
+    padding-top: 24px; border-top: 1px solid var(--hairline);
+    font-size: 12px; color: var(--text-3); font-family: 'JetBrains Mono', monospace;
+  }
+  header.hero .meta strong { color: var(--text); font-weight: 600; }
+  header.hero .meta .pill { padding: 5px 12px; background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px; }
+
+  /* ============== SECTION ============== */
+  .section-head { margin: 96px 0 48px; max-width: 920px; }
+  .section-head .num {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: var(--coral); letter-spacing: 0.2em; margin-bottom: 12px;
+  }
+  .section-head h2 {
+    font-family: 'Inter Tight', Inter, sans-serif;
+    font-size: 32px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px;
+  }
+  .section-head p { font-size: 15px; color: var(--text-2); max-width: 720px; }
+
+  /* ============== GALLERY ============== */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    gap: 64px 40px;
+    align-items: end;
+    justify-items: center;
+  }
+
+  .frame-wrap { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .frame-wrap .caption { text-align: center; max-width: 360px; }
+  .frame-wrap .caption .num { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: var(--coral); letter-spacing: 0.2em; }
+  .frame-wrap .caption .title { font-family: 'Inter Tight', sans-serif; font-size: 18px; font-weight: 700; margin: 6px 0 6px; letter-spacing: -0.01em; }
+  .frame-wrap .caption .desc { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+
+  /* ============== iPhone 14 Pro shell ============== */
+  .device {
+    width: 390px;
+    height: 844px;
+    position: relative;
+    border-radius: 55px;
+    background: linear-gradient(140deg, #2a2c30 0%, #1a1c1f 50%, #08090b 100%);
+    padding: 11px;
+    box-shadow:
+      0 0 0 2px #1a1c1f,
+      inset 0 0 0 1px rgba(255,255,255,0.05),
+      0 80px 120px -50px rgba(232,122,106,0.18),
+      0 60px 80px -40px rgba(0,0,0,0.6),
+      0 30px 60px -30px rgba(0,0,0,0.4);
+  }
+  /* side buttons */
+  .device::before {
+    content: '';
+    position: absolute;
+    left: -2px; top: 95px;
+    width: 3px; height: 32px;
+    background: #1a1c1f;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 50px 0 #1a1c1f, 0 100px 0 #1a1c1f, 0 165px 0 #1a1c1f;
+  }
+  .device::after {
+    content: '';
+    position: absolute;
+    right: -2px; top: 165px;
+    width: 3px; height: 90px;
+    background: #1a1c1f;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .screen {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    border-radius: 47px;
+    overflow: hidden;
+    position: relative;
+    color: var(--text);
+    display: flex; flex-direction: column;
+  }
+
+  /* Dynamic Island */
+  .dyn-island {
+    position: absolute;
+    top: 11px; left: 50%; transform: translateX(-50%);
+    width: 126px; height: 37px;
+    background: #000;
+    border-radius: 19px;
+    z-index: 50;
+  }
+
+  /* Status bar */
+  .status-bar {
+    height: 54px;
+    padding: 17px 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    font-feature-settings: "tnum" 1;
+    z-index: 5;
+  }
+  .status-bar .time { letter-spacing: -0.01em; }
+  .status-bar .icons { display: flex; gap: 6px; align-items: center; }
+
+  /* Home indicator */
+  .home-bar {
+    position: absolute;
+    bottom: 8px; left: 50%; transform: translateX(-50%);
+    width: 134px; height: 5px;
+    background: var(--text);
+    border-radius: 3px;
+    opacity: 0.95;
+    z-index: 50;
+  }
+
+  /* Content area */
+  .content {
+    flex: 1 1 auto;
+    padding: 18px 24px 36px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Bottom nav */
+  .nav {
+    flex-shrink: 0;
+    padding: 10px 16px 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(12,16,24,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(42,51,70,0.5);
+  }
+  .nav-item {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    font-size: 10.5px; font-weight: 500;
+    color: var(--text-3);
+  }
+  .nav-item.active { color: var(--coral); }
+  .nav-icon {
+    width: 24px; height: 24px;
+    display: flex; align-items: center; justify-content: center;
+    color: inherit;
+  }
+
+  /* ============== Reusable components ============== */
+  .greeting { font-family: 'Inter Tight', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; }
+  .sub { font-size: 14px; color: var(--text-2); margin-top: 6px; }
+
+  /* Day strip */
+  .day-strip {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin-top: 22px;
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  .day-strip::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0; width: 32px;
+    background: linear-gradient(90deg, transparent, var(--surface));
+    pointer-events: none;
+  }
+  .day-strip .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-mute); flex-shrink: 0; }
+  .day-strip .dot.done { background: var(--text-2); }
+  .day-strip .dot.today {
+    width: 12px; height: 12px;
+    background: var(--coral);
+    box-shadow: 0 0 0 3px rgba(232,122,106,0.18), 0 0 16px rgba(232,122,106,0.4);
+  }
+  .day-strip .label { font-size: 10px; color: var(--text-3); margin-left: auto; font-family: 'JetBrains Mono', monospace; z-index: 2; }
+
+  /* Today card */
+  .today-card {
+    background: linear-gradient(135deg, #1d2535 0%, #14191f 100%);
+    border: 1px solid var(--hairline);
+    border-radius: 22px;
+    padding: 22px 22px 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
+  }
+  .today-card::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -20%;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(232,122,106,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .today-card .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: var(--gold-eyebrow); margin-bottom: 14px; }
+  .today-card .head { font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 800; line-height: 1.18; letter-spacing: -0.015em; color: var(--text); }
+  .today-card .meta { font-size: 11.5px; color: var(--text-3); margin-top: 10px; display: flex; align-items: center; gap: 8px; }
+  .today-card .meta::before { content: '◐'; color: var(--coral); }
+  .today-card .cta {
+    margin-top: 18px;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 18px;
+    background: var(--text); color: var(--bg);
+    border-radius: 999px;
+    font-size: 13px; font-weight: 700;
+  }
+  .today-card .cta-arrow { font-size: 14px; }
+
+  /* Tile row */
+  .tile-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+  .tile {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 18px;
+    padding: 16px;
+  }
+  .tile.cream { background: var(--coral-bg); border-color: rgba(232,122,106,0.25); }
+  .tile-eyebrow { font-size: 9.5px; font-weight: 700; letter-spacing: 0.16em; color: var(--text-3); }
+  .tile-num { font-family: 'Inter Tight', sans-serif; font-size: 32px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; margin-top: 6px; color: var(--text); }
+  .tile-num small { font-size: 12px; font-weight: 500; color: var(--text-3); margin-left: 4px; }
+  .tile-meta { font-size: 10.5px; margin-top: 6px; color: var(--teal); font-weight: 600; }
+  .tile-q { font-size: 12.5px; margin-top: 14px; color: var(--text); line-height: 1.4; }
+
+  /* Banner */
+  .banner-amber {
+    background: var(--amber-bg);
+    border: 1px solid rgba(230,181,106,0.4);
+    color: var(--amber);
+    border-radius: 14px; padding: 12px 14px;
+    font-size: 12.5px; font-weight: 600;
+    margin-top: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .banner-amber .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex-shrink: 0; box-shadow: 0 0 8px rgba(230,181,106,0.6); }
+
+  /* SPLASH */
+  .splash {
+    height: 100%;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    padding: 80px 32px 56px;
+    text-align: center;
+  }
+  .splash .wordmark {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 44px; font-weight: 800; letter-spacing: -0.04em;
+    background: linear-gradient(180deg, #f5efe2 0%, #d4cab4 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .splash .wordmark .dot { color: var(--coral); -webkit-text-fill-color: var(--coral); }
+  .splash .tag { font-size: 14px; color: var(--text-2); margin-top: 6px; letter-spacing: 0.01em; }
+  .splash .softbox {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 22px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .splash .softbox::before {
+    content: '';
+    position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+    width: 60%; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--coral), transparent);
+  }
+  .splash .softbox .lead { font-family: 'Inter Tight', sans-serif; font-size: 19px; font-weight: 700; }
+  .splash .softbox .body { font-size: 13px; color: var(--text-2); margin-top: 6px; line-height: 1.5; }
+  .btn-primary {
+    display: block; width: 100%; padding: 18px;
+    background: var(--coral); color: #fff;
+    border: none; border-radius: 999px;
+    font-size: 16px; font-weight: 700; letter-spacing: 0.005em;
+    box-shadow: 0 12px 30px -10px rgba(232,122,106,0.5);
+  }
+  .btn-secondary {
+    display: block; width: 100%; padding: 14px;
+    background: transparent; color: var(--text-3);
+    border: none;
+    font-size: 12.5px;
+  }
+
+  /* Onboarding */
+  .progress-bar {
+    height: 4px; background: var(--surface-2); border-radius: 2px;
+    margin-bottom: 24px; overflow: hidden;
+  }
+  .progress-bar > div { height: 100%; background: linear-gradient(90deg, var(--coral) 0%, var(--gold-eyebrow) 100%); width: 100%; border-radius: 2px; }
+  .step-meta { font-size: 10.5px; color: var(--text-3); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 10px; font-family: 'JetBrains Mono', monospace; }
+  .step-h { font-family: 'Inter Tight', sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.18; }
+  .step-sub { font-size: 13px; color: var(--text-2); margin-top: 10px; margin-bottom: 24px; }
+  .opt {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 18px;
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 999px;
+    font-size: 13.5px; font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-2);
+  }
+  .opt.selected { background: var(--coral); color: #fff; border-color: var(--coral); }
+  .opt .check {
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 1.5px solid var(--text-mute);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; flex-shrink: 0;
+  }
+  .opt.selected .check { background: #fff; color: var(--coral); border-color: #fff; font-weight: 700; }
+
+  /* Calm mode */
+  .calm-card {
+    background: linear-gradient(160deg, #1a2228 0%, #0f1318 100%);
+    border: 1px solid var(--hairline);
+    border-radius: 22px;
+    padding: 36px 28px;
+    text-align: center;
+    margin-top: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .calm-card::before {
+    content: '';
+    position: absolute; top: -50px; left: -50px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(124,192,179,0.15) 0%, transparent 70%);
+  }
+  .calm-card .lead { font-family: 'Inter Tight', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
+  .calm-card .body { font-size: 13.5px; color: var(--text-2); margin-top: 16px; line-height: 1.55; }
+  .calm-card .promise {
+    font-size: 12px; color: var(--teal); margin-top: 24px; line-height: 1.5;
+    padding-top: 18px; border-top: 1px solid var(--hairline);
+  }
+  .quiet-line { text-align: center; font-size: 11px; color: var(--text-mute); font-style: italic; margin-top: 64px; letter-spacing: 0.04em; }
+
+  /* UI Filing form */
+  .form-section { font-size: 10px; color: var(--text-3); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .answer-box {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+  }
+  .answer-box .label { font-size: 10px; color: var(--text-3); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .answer-box .answer { font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; margin-top: 10px; line-height: 1.4; color: var(--text); }
+  .feedback {
+    border-radius: 14px; padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid;
+  }
+  .feedback.good { background: var(--teal-bg); border-color: rgba(124,192,179,0.4); }
+  .feedback.warn { background: var(--coral-bg); border-color: rgba(232,122,106,0.4); }
+  .feedback .head { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .feedback.good .head { color: var(--teal); }
+  .feedback.warn .head { color: var(--coral); }
+  .feedback .body { font-size: 12.5px; margin-top: 6px; line-height: 1.5; color: var(--text); }
+  .row-buttons { display: flex; gap: 10px; margin-top: 14px; }
+  .row-buttons .btn-primary { flex: 1 1 auto; padding: 16px; }
+  .btn-pause {
+    padding: 16px 22px; background: var(--surface); border: 1px solid var(--hairline);
+    color: var(--text); border-radius: 999px; font-weight: 700; font-size: 13px;
+  }
+
+  /* Severance Reviewer */
+  .clause-back { font-size: 12.5px; color: var(--text-3); margin-bottom: 18px; }
+  .clause-card {
+    background: linear-gradient(160deg, #1c2434 0%, #131822 100%);
+    border: 1px solid var(--hairline);
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 24px 48px -24px rgba(0,0,0,0.5);
+  }
+  .clause-card .label { font-size: 10px; color: var(--text-3); letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .clause-card .clause-name { font-family: 'Inter Tight', sans-serif; font-size: 28px; font-weight: 800; margin: 6px 0 14px; letter-spacing: -0.02em; color: var(--text); }
+  .badge-coral {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--coral); color: #fff;
+    padding: 5px 12px; border-radius: 999px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    margin-bottom: 18px;
+  }
+  .clause-section { margin-bottom: 16px; }
+  .clause-section .label { font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; }
+  .clause-section.verbatim .label { color: var(--text-mute); }
+  .clause-section.plain .label { color: var(--teal); }
+  .clause-section.ask .label { color: var(--plum); }
+  .clause-section .text { font-size: 12.5px; line-height: 1.55; margin-top: 6px; color: var(--text); }
+  .pagination { display: flex; gap: 5px; justify-content: center; margin-top: 14px; padding-top: 16px; border-top: 1px solid var(--hairline); }
+  .page-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--surface-3); }
+  .page-dot.done { background: var(--coral); }
+
+  /* Runway */
+  .runway-back { font-size: 12.5px; color: var(--text-3); margin-bottom: 8px; }
+  .runway-h { font-family: 'Inter Tight', sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
+  .runway-num {
+    text-align: center; margin: 32px 0 8px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 110px; font-weight: 800; letter-spacing: -0.06em;
+    line-height: 0.95;
+    background: linear-gradient(180deg, #f5efe2 0%, var(--coral) 200%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .runway-unit { text-align: center; font-size: 19px; font-weight: 600; color: var(--text-2); }
+  .runway-cap { text-align: center; font-size: 11.5px; color: var(--text-3); margin-top: 8px; margin-bottom: 28px; font-family: 'JetBrains Mono', monospace; }
+  .runway-bar {
+    height: 8px; background: var(--surface-2); border-radius: 999px;
+    overflow: hidden; margin-bottom: 8px;
+    position: relative;
+  }
+  .runway-bar > div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--coral) 0%, var(--gold-eyebrow) 100%);
+    border-radius: 999px; width: 65%;
+    box-shadow: 0 0 12px rgba(232,122,106,0.4);
+  }
+  .runway-meta { display: flex; justify-content: space-between; font-size: 10.5px; color: var(--text-3); margin-bottom: 22px; font-family: 'JetBrains Mono', monospace; }
+  .extend-card {
+    background: var(--teal-bg); border: 1px solid rgba(124,192,179,0.3);
+    border-radius: 16px; padding: 16px;
+    margin-bottom: 16px;
+  }
+  .extend-card .head { font-size: 10px; color: var(--teal); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .extend-card .body { font-size: 13.5px; margin-top: 8px; color: var(--text); }
+  .extend-card .cta { font-size: 11px; color: var(--teal); margin-top: 6px; font-weight: 600; }
+  .adjust-list .label { font-size: 10px; color: var(--text-3); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
+  .adjust-list ul { list-style: none; }
+  .adjust-list li { padding: 10px 0; border-bottom: 1px solid var(--hairline); font-size: 13px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+  .adjust-list li::before { content: '+'; color: var(--coral); font-weight: 700; }
+
+  /* COBRA compare */
+  .compare-row {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 10px;
+  }
+  .compare-row.recommended { background: var(--teal-bg); border-color: rgba(124,192,179,0.4); }
+  .compare-row .name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .compare-row .price { font-family: 'Inter Tight', sans-serif; font-size: 26px; font-weight: 800; margin-top: 4px; letter-spacing: -0.02em; color: var(--text); }
+  .compare-row .price small { font-size: 11px; font-weight: 500; color: var(--text-3); }
+  .compare-row .reasons { font-size: 11.5px; color: var(--text-2); margin-top: 8px; line-height: 1.5; }
+  .compare-row .pill {
+    display: inline-flex; padding: 4px 10px; background: var(--teal); color: var(--bg-deep);
+    font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em;
+    border-radius: 999px; margin-bottom: 8px;
+  }
+
+  /* Day 30 */
+  .wrap-h { font-family: 'Inter Tight', sans-serif; font-size: 28px; font-weight: 800; text-align: center; letter-spacing: -0.025em; margin-top: 24px; }
+  .wrap-sub { font-size: 13.5px; color: var(--text-2); text-align: center; margin: 6px 0 24px; }
+  .check-list, .pending-list { list-style: none; }
+  .check-list li { font-size: 12.5px; padding: 6px 0; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .check-list li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+  .pending-list li { font-size: 12.5px; padding: 6px 0; color: var(--text-2); display: flex; align-items: center; gap: 10px; }
+  .pending-list li::before { content: '○'; color: var(--text-mute); flex-shrink: 0; }
+  .step-back-card {
+    background: var(--coral-bg);
+    border: 1px solid rgba(232,122,106,0.25);
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    margin: 18px 0;
+  }
+  .step-back-card .lead { font-family: 'Inter Tight', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); }
+  .step-back-card .body { font-size: 12.5px; color: var(--text-2); margin-top: 6px; line-height: 1.5; }
+
+  /* Decorative line */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--hairline), transparent);
+    margin: 96px 0 72px;
+  }
+
+  /* Footer */
+  footer.proj { margin-top: 120px; padding-top: 40px; border-top: 1px solid var(--hairline); color: var(--text-3); font-size: 12.5px; text-align: center; }
+  footer.proj .signoff { font-family: 'Inter Tight', sans-serif; font-size: 24px; font-weight: 700; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+
+<!-- Case-study site navigation -->
+<style>
+  .csnav { position: sticky; top: 0; z-index: 100; background: rgba(7,9,13,0.78); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(42,51,70,0.6); }
+  .csnav-inner { max-width: 1480px; margin: 0 auto; padding: 18px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .csnav-brand { font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 10px; color: #f0e9d8; }
+  .csnav-brand .dot { color: #e87a6a; }
+  .csnav-brand small { color: #6a6a72; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  .csnav-links { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+  .csnav-links a { font-size: 13.5px; font-weight: 500; color: #a8a499; padding: 8px 14px; border-radius: 999px; text-decoration: none; transition: all 0.15s ease; }
+  .csnav-links a:hover { color: #f0e9d8; background: #141a24; }
+  .csnav-links a.active { color: #e87a6a; background: rgba(232,122,106,0.12); }
+  .csnav-cta { padding: 10px 18px; background: #e87a6a; color: #fff; border-radius: 999px; font-size: 13px; font-weight: 700; text-decoration: none; }
+  .csnav-cta:hover { background: #c5594a; }
+</style>
+<nav class="csnav"><div class="csnav-inner">
+  <div class="csnav-brand">severance<span class="dot">.</span> <small>UX Case Study</small></div>
+  <div class="csnav-links">
+    <a href="index.html">Overview</a>
+    <a href="process.html">Process</a>
+    <a href="research.html">Research</a>
+    <a href="wireframes.html">Wireframes</a>
+    <a href="designs.html" class="active">Designs</a>
+    <a href="testing.html">Testing</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="about.html" class="csnav-cta">Get in touch</a>
+</div></nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">SEVERANCE · v5 · iPHONE 14 PRO · DARK</div>
+    <h1>Your first 30 days,<br/>handled.</h1>
+    <p>The final design system, rendered in dark mode for the iPhone 14 Pro form factor. Calm, capable, slightly dry. One sequenced action per day, runway as a single number, and a graceful exit when you no longer need it.</p>
+    <div class="meta">
+      <span class="pill"><strong>Platform</strong> iOS 17+ · iPhone 14 Pro · 390×844pt</span>
+      <span class="pill"><strong>Theme</strong> Dark</span>
+      <span class="pill"><strong>SUS</strong> 84.5</span>
+      <span class="pill"><strong>WCAG</strong> 2.1 AA</span>
+    </div>
+  </header>
+
+  <div class="section-head">
+    <div class="num">01 · FIRST IMPRESSION</div>
+    <h2>Onboarding — eight minutes, three questions, calm tone.</h2>
+    <p>The product earns its position in the first eight minutes. Splash sets the tone with restraint. Onboarding asks just enough to personalize without interrogating. Voice: a friend who happens to be an HR lawyer.</p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- ============ SCREEN 01 — SPLASH ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">9:41</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="splash">
+            <div>
+              <div class="wordmark">severance<span class="dot">.</span></div>
+              <div class="tag">your first 30 days, handled.</div>
+            </div>
+            <div>
+              <div class="softbox">
+                <div class="lead">We're sorry.</div>
+                <div class="body">Let's make this a little calmer.</div>
+              </div>
+              <button class="btn-primary">Begin</button>
+              <button class="btn-secondary">Why we built this</button>
+            </div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">01</div>
+        <div class="title">Splash</div>
+        <div class="desc">Restraint as a design choice. Coral wordmark dot is the first hint of warmth in an otherwise quiet screen.</div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 02 — ONBOARDING ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">9:48</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="progress-bar"><div></div></div>
+            <div class="step-meta">STEP 9 / 9</div>
+            <div class="step-h">What feels<br/>most urgent<br/>right now?</div>
+            <div class="step-sub">Choose any. We'll plan around them.</div>
+            <div class="opt selected"><div class="check">✓</div>Filing for unemployment</div>
+            <div class="opt selected"><div class="check">✓</div>Health insurance</div>
+            <div class="opt"><div class="check"></div>Severance review</div>
+            <div class="opt selected"><div class="check">✓</div>Money / runway</div>
+            <div class="opt"><div class="check"></div>Honestly, I just need a moment</div>
+            <button class="btn-primary" style="margin-top: auto;">Build my plan →</button>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">02</div>
+        <div class="title">Onboarding · what's urgent</div>
+        <div class="desc">Multi-select shapes the first day. "Just need a moment" routes into calm mode.</div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 03 — HOME DAY 4 (HERO) ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">9:14</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="greeting">Good morning,<br/>Maya.</div>
+            <div class="sub">Day 4 · paperwork day.</div>
+            <div class="day-strip">
+              <div class="dot done"></div><div class="dot done"></div><div class="dot done"></div>
+              <div class="dot today"></div>
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+              <span class="label">··· 30</span>
+            </div>
+            <div class="today-card">
+              <div class="eyebrow">TODAY · ONE THING</div>
+              <div class="head">File your CA<br/>unemployment claim</div>
+              <div class="meta">~ 18 min · we'll guide you</div>
+              <div class="cta">Start <span class="cta-arrow">→</span></div>
+            </div>
+            <div class="tile-row">
+              <div class="tile">
+                <div class="tile-eyebrow">RUNWAY</div>
+                <div class="tile-num">5.7<small>mo</small></div>
+                <div class="tile-meta">↑ extend $284</div>
+              </div>
+              <div class="tile cream">
+                <div class="tile-eyebrow">CHECK-IN</div>
+                <div class="tile-q">how is today, in one word?</div>
+              </div>
+            </div>
+            <div class="banner-amber">
+              <div class="dot"></div>
+              COBRA election: 18 days left
+            </div>
+          </div>
+          <div class="nav">
+            <div class="nav-item active"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor"><path d="M11 2 L20 10 V20 H14 V14 H8 V20 H2 V10 Z"/></svg></div>Home</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="16" height="16" rx="2"/><line x1="3" y1="9" x2="19" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="14" y1="2" x2="14" y2="6"/></svg></div>Plan</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="11" y1="3" x2="11" y2="20"/><path d="M16 6 H9 a3 3 0 0 0 0 6 H13 a3 3 0 0 1 0 6 H6"/></svg></div>Money</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3 H13 L18 8 V20 H5 Z"/><path d="M13 3 V8 H18"/></svg></div>Docs</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor"><circle cx="5" cy="11" r="2"/><circle cx="11" cy="11" r="2"/><circle cx="17" cy="11" r="2"/></svg></div>More</div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">03</div>
+        <div class="title">Home · Day 4 (the hero)</div>
+        <div class="desc">Single action card on top, one runway number, one check-in nudge. Coral dot on the day strip is "today, here."</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-head">
+    <div class="num">02 · WHEN THE USER IS IN SHOCK</div>
+    <h2>Calm mode — the first three days are not productive days.</h2>
+    <p>Days 1–3 are structurally different from Day 4 onward. The home screen narrows to a single quiet card. Empty space is the design. The product holds the user back from regrettable decisions.</p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- ============ SCREEN 04 — CALM MODE ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">8:02</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="greeting">Good morning,<br/>Joanne.</div>
+            <div class="sub">Day 2 · we'll be steady.</div>
+            <div class="day-strip">
+              <div class="dot done"></div>
+              <div class="dot today"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="calm-card">
+              <div class="lead">Today: rest.</div>
+              <div class="body">Save your work contacts if you haven't yet. Four minutes. Nothing else needs doing today.</div>
+              <div class="promise">We'll surface paperwork on Day 4.</div>
+            </div>
+            <div class="quiet-line">— that's all for now —</div>
+          </div>
+          <div class="nav">
+            <div class="nav-item active"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor"><path d="M11 2 L20 10 V20 H14 V14 H8 V20 H2 V10 Z"/></svg></div>Home</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="16" height="16" rx="2"/><line x1="3" y1="9" x2="19" y2="9"/></svg></div>Plan</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="11" y1="3" x2="11" y2="20"/><path d="M16 6 H9 a3 3 0 0 0 0 6 H13 a3 3 0 0 1 0 6 H6"/></svg></div>Money</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3 H13 L18 8 V20 H5 Z"/></svg></div>Docs</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor"><circle cx="5" cy="11" r="2"/><circle cx="11" cy="11" r="2"/><circle cx="17" cy="11" r="2"/></svg></div>More</div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">04</div>
+        <div class="title">Home · Day 2 (calm mode)</div>
+        <div class="desc">One card. Empty space below, on purpose. The most-discussed screen in usability testing.</div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 05 — UI FILING ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">10:22</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="clause-back">← UI filing helper · CA</div>
+            <div class="step-h">Reason for<br/>separation</div>
+            <div class="step-sub">How you describe this matters. We'll flag risky phrasing.</div>
+            <div class="answer-box">
+              <div class="label">YOUR ANSWER (auto-filled)</div>
+              <div class="answer">"laid off — position eliminated, no cause"</div>
+            </div>
+            <div class="feedback good">
+              <div class="head">✓ THIS PHRASING IS WELL-ALIGNED</div>
+              <div class="body">"Position eliminated" maps cleanly to EDD lay-off categories.</div>
+            </div>
+            <div class="feedback warn">
+              <div class="head">⚠ COMMON REJECTION TRIGGER</div>
+              <div class="body">Don't write "I quit" or "chose to leave."</div>
+            </div>
+            <div class="row-buttons">
+              <button class="btn-primary">Continue →</button>
+              <button class="btn-pause">Pause</button>
+            </div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">05</div>
+        <div class="title">UI Filing Helper · Section 3</div>
+        <div class="desc">Phrasing checks against state-specific rejection triggers. The product translates EDD jargon — never speaks it.</div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 06 — SEVERANCE REVIEWER ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">11:08</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="clause-back">← Severance review</div>
+            <div class="clause-card">
+              <div class="label">CLAUSE TYPE</div>
+              <div class="clause-name">Non-solicit</div>
+              <div class="badge-coral">⚠ unusual · CA</div>
+              <div class="clause-section verbatim">
+                <div class="label">VERBATIM</div>
+                <div class="text">"For 12 months, you may not solicit, contact, or hire any employee or contractor of [Company]…"</div>
+              </div>
+              <div class="clause-section plain">
+                <div class="label">PLAIN ENGLISH</div>
+                <div class="text">You can't reach out to former colleagues for jobs for a year. In CA, this is broader than typical — state law limits enforceability.</div>
+              </div>
+              <div class="clause-section ask">
+                <div class="label">CONSIDER ASKING</div>
+                <div class="text">"Can we narrow this to direct reports only?"</div>
+              </div>
+              <div class="pagination">
+                <div class="page-dot done"></div><div class="page-dot done"></div><div class="page-dot done"></div><div class="page-dot done"></div><div class="page-dot done"></div>
+                <div class="page-dot"></div><div class="page-dot"></div><div class="page-dot"></div><div class="page-dot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">06</div>
+        <div class="title">Severance Reviewer · clause card</div>
+        <div class="desc">Card-deck. One clause at a time, in your jurisdiction's context. Plain English next to verbatim.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-head">
+    <div class="num">03 · MONEY, HEALTH, GRACEFUL EXIT</div>
+    <h2>The runway tile, the COBRA decision, and Day 30.</h2>
+    <p>Three of the most-loved screens in usability testing. Runway is one number, never a chart. COBRA is ranked by *your* providers and prescriptions. Day 30 is honest, not celebratory — a graceful exit instead of a high-five.</p>
+  </div>
+
+  <div class="gallery">
+
+    <!-- ============ SCREEN 07 — RUNWAY ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">3:14</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="runway-back">← back</div>
+            <div class="runway-h">Your runway</div>
+            <div class="runway-num">5.7</div>
+            <div class="runway-unit">months</div>
+            <div class="runway-cap">at your current burn rate</div>
+            <div class="runway-bar"><div></div></div>
+            <div class="runway-meta"><span>day 4</span><span>runs dry · oct 14</span></div>
+            <div class="extend-card">
+              <div class="head">EXTEND BY $284 / MO · +0.4 mo</div>
+              <div class="body">Cancel: streaming, meal kit</div>
+              <div class="cta">Tap to audit (one-tap) →</div>
+            </div>
+            <div class="adjust-list">
+              <div class="label">ADJUST</div>
+              <ul>
+                <li>Household income</li>
+                <li>Severance schedule</li>
+                <li>HSA / RRSP draw</li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav">
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M11 2 L20 10 V20 H14 V14 H8 V20 H2 V10 Z"/></svg></div>Home</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="16" height="16" rx="2"/><line x1="3" y1="9" x2="19" y2="9"/></svg></div>Plan</div>
+            <div class="nav-item active"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2"><line x1="11" y1="3" x2="11" y2="20"/><path d="M16 6 H9 a3 3 0 0 0 0 6 H13 a3 3 0 0 1 0 6 H6"/></svg></div>Money</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 3 H13 L18 8 V20 H5 Z"/></svg></div>Docs</div>
+            <div class="nav-item"><div class="nav-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor"><circle cx="5" cy="11" r="2"/><circle cx="11" cy="11" r="2"/><circle cx="17" cy="11" r="2"/></svg></div>More</div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">07</div>
+        <div class="title">Runway · the one number</div>
+        <div class="desc">Never a chart. The most-loved screen in testing — a single number with one calm extend-action below.</div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 08 — COBRA vs ACA ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">2:37</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="runway-back">← back</div>
+            <div class="runway-h">Health coverage</div>
+            <div class="step-sub">Ranked by your providers (Maya's allergist, EpiPen Rx) and CA subsidy eligibility.</div>
+            <div class="compare-row recommended">
+              <div class="pill">RECOMMENDED</div>
+              <div class="name">Covered California — Silver 70</div>
+              <div class="price">$230<small>/mo</small></div>
+              <div class="reasons">Keeps allergist (Dr. Lee) in network · EpiPen Rx covered · subsidy applied · enroll by May 9.</div>
+            </div>
+            <div class="compare-row">
+              <div class="name">COBRA — through Aetna</div>
+              <div class="price">$1,840<small>/mo (family)</small></div>
+              <div class="reasons">Same network, same plan · 60-day election window · expensive vs. subsidized ACA.</div>
+            </div>
+            <div class="compare-row">
+              <div class="name">Spouse's plan (Kaiser)</div>
+              <div class="price">$540<small>/mo (family)</small></div>
+              <div class="reasons">⚠ Allergist out-of-network · 30-day qualifying-event window · would change provider.</div>
+            </div>
+            <div class="row-buttons" style="margin-top: 16px;">
+              <button class="btn-primary">Enroll in Covered California →</button>
+            </div>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">08</div>
+        <div class="title">Health · COBRA vs. ACA</div>
+        <div class="desc">Decisions ranked by *your* providers and subsidy eligibility, not generic plan comparisons.</div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 09 — DAY 30 ============ -->
+    <div class="frame-wrap">
+      <div class="device">
+        <div class="screen">
+          <div class="dyn-island"></div>
+          <div class="status-bar">
+            <span class="time">7:46</span>
+            <span class="icons">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="1"/><rect x="5" y="3" width="3" height="8" rx="1"/><rect x="10" y="0" width="3" height="11" rx="1"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 4 Q8 -2 15 4" stroke-linecap="round"/><path d="M3.5 6.5 Q8 2.5 12.5 6.5" stroke-linecap="round"/><circle cx="8" cy="9.5" r="1" fill="currentColor"/></svg>
+              <svg width="27" height="12" viewBox="0 0 27 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="2.5" stroke="currentColor" stroke-opacity="0.5"/><rect x="2" y="2" width="19" height="8" rx="1.5" fill="currentColor"/><rect x="23.5" y="3.5" width="2" height="5" rx="1" fill="currentColor" fill-opacity="0.5"/></svg>
+            </span>
+          </div>
+          <div class="content">
+            <div class="wrap-h">Day 30.</div>
+            <div class="wrap-sub">You got through 30 days.</div>
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.16em; color: var(--teal); text-transform: uppercase; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace;">WHAT YOU DID</div>
+            <ul class="check-list">
+              <li>Filed CA EDD claim</li>
+              <li>Chose Covered California (saved $1,610/mo)</li>
+              <li>Reviewed severance, signed day 9 (negotiated non-solicit to 6 mo)</li>
+              <li>Rolled over 401(k) to IRA</li>
+              <li>Posted to LinkedIn (day 5, draft 3)</li>
+              <li>Saved $284/mo from subscription audit</li>
+            </ul>
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 0.16em; color: var(--amber); text-transform: uppercase; margin: 18px 0 8px; font-family: 'JetBrains Mono', monospace;">STILL PENDING</div>
+            <ul class="pending-list">
+              <li>First EDD payment ETA day 34</li>
+              <li>5 applications awaiting reply</li>
+            </ul>
+            <div class="step-back-card">
+              <div class="lead">We'll step back now.</div>
+              <div class="body">A weekly check-in is enough. You don't need us every day anymore.</div>
+            </div>
+            <button class="btn-primary">Switch to weekly mode</button>
+          </div>
+          <div class="home-bar"></div>
+        </div>
+      </div>
+      <div class="caption">
+        <div class="num">09</div>
+        <div class="title">Day 30 · graceful exit</div>
+        <div class="desc">Not "you did it!" — survived, summarized, set free. The product steps back rather than holding you prisoner.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="proj">
+    <div class="signoff">severance.</div>
+    Final hi-fi mockups · v5 · iPhone 14 Pro · Dark Mode · Designed by Jenil Gohel
+  </footer>
+</div>
+</body>
+</html>
